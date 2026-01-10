@@ -90,7 +90,7 @@ export function Footer() {
           </div>
 
           <a 
-            href="https://github.com/kleuvyn/portfolio" 
+            href="https://github.com/kleuvyn" 
             target="_blank" 
             rel="noopener noreferrer"
             className="text-[10px] font-mono text-muted-foreground/40 hover:text-primary flex items-center gap-1 transition-colors uppercase"
