@@ -1,9 +1,10 @@
 "use client"
 
 import { useState, useEffect } from "react"
-import { Menu, X, Globe, ChevronDown } from "lucide-react"
+import { Menu, X, Globe, ChevronDown, Moon, Sun } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { useLanguage } from "@/components/providers" 
+import { useTheme } from "next-themes" 
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -14,10 +15,13 @@ import {
 export function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
+  const [mounted, setMounted] = useState(false)
   
   const { language, setLanguage, t } = useLanguage()
+  const { theme, setTheme } = useTheme()
 
   useEffect(() => {
+    setMounted(true)
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20)
     }
@@ -48,15 +52,15 @@ export function Navbar() {
         <div className="flex items-center justify-between">
           <a href="#" className="flex flex-col group">
             <span className="text-xl font-bold tracking-tighter text-foreground group-hover:text-primary transition-colors">
-            <span className="italic font-serif">KLEUVYN</span>
+              <span className="italic font-serif">KLEUVYN</span>
             </span>
             <span className="text-[8px] uppercase tracking-[0.3em] text-muted-foreground font-bold">
               Software Engineer
             </span>
           </a>
 
-          <div className="hidden md:flex items-center gap-10">
-            <div className="flex items-center gap-8">
+          <div className="hidden md:flex items-center gap-6">
+            <div className="flex items-center gap-8 mr-4">
               {navLinks.map((link) => (
                 <a
                   key={link.href}
@@ -70,6 +74,21 @@ export function Navbar() {
             </div>
 
             <div className="h-4 w-px bg-border/60" />
+
+            <Button
+              variant="ghost"
+              size="sm"
+              className="w-9 px-0 hover:bg-primary/5 focus:ring-0"
+              onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+            >
+              {mounted && (
+                <>
+                  <Sun className="h-4 w-4 rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0 text-primary" />
+                  <Moon className="absolute h-4 w-4 rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100 text-primary" />
+                </>
+              )}
+              <span className="sr-only">Toggle theme</span>
+            </Button>
 
             <DropdownMenu>
               <DropdownMenuTrigger asChild>
@@ -98,7 +117,7 @@ export function Navbar() {
             </Button>
           </div>
 
-          <div className="md:hidden">
+          <div className="md:hidden flex items-center gap-4">
             <button
               className="p-2 text-foreground focus:outline-none"
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
@@ -123,25 +142,40 @@ export function Navbar() {
                 </a>
               ))}
               
-              <div className="flex items-center justify-between py-2">
-                <span className="text-muted-foreground uppercase tracking-widest text-[10px] font-bold">Idioma</span>
-                <div className="flex gap-2">
-                  {languages.map((lang) => (
-                    <button
-                      key={lang.code}
-                      onClick={() => {
-                        setLanguage(lang.code)
-                        setIsMobileMenuOpen(false)
-                      }}
-                      className={`text-[10px] font-bold px-3 py-1.5 rounded-full border transition-all ${
-                        language === lang.code 
-                          ? 'bg-primary border-primary text-primary-foreground' 
-                          : 'border-border text-muted-foreground'
-                      }`}
-                    >
-                      {lang.flag} {lang.code}
-                    </button>
-                  ))}
+              <div className="flex flex-col gap-4 py-2">
+                <div className="flex items-center justify-between">
+                  <span className="text-muted-foreground uppercase tracking-widest text-[10px] font-bold">Aparência</span>
+                  <Button 
+                    variant="outline" 
+                    size="sm" 
+                    onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+                    className="rounded-full gap-2 text-[10px] font-bold border-border/50"
+                  >
+                    {theme === "dark" ? <Sun className="h-3 w-3" /> : <Moon className="h-3 w-3" />}
+                    {theme === "dark" ? "Modo Claro" : "Modo Escuro"}
+                  </Button>
+                </div>
+
+                <div className="flex items-center justify-between">
+                  <span className="text-muted-foreground uppercase tracking-widest text-[10px] font-bold">Idioma</span>
+                  <div className="flex gap-2">
+                    {languages.map((lang) => (
+                      <button
+                        key={lang.code}
+                        onClick={() => {
+                          setLanguage(lang.code)
+                          setIsMobileMenuOpen(false)
+                        }}
+                        className={`text-[10px] font-bold px-3 py-1.5 rounded-full border transition-all ${
+                          language === lang.code 
+                            ? 'bg-primary border-primary text-primary-foreground' 
+                            : 'border-border text-muted-foreground'
+                        }`}
+                      >
+                        {lang.flag} {lang.code}
+                      </button>
+                    ))}
+                  </div>
                 </div>
               </div>
 

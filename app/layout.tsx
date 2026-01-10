@@ -2,7 +2,6 @@ import { Providers } from "@/components/providers";
 import { Inter, Montserrat } from "next/font/google";
 import "./globals.css";
 
-// 1. Configuração das fontes
 const inter = Inter({ 
   subsets: ["latin"], 
   variable: "--font-inter",
@@ -15,13 +14,11 @@ const montserrat = Montserrat({
   display: 'swap',
 });
 
-// 2. Metadados
 export const metadata = {
   title: "Beatryz Kleuvyn | Software Engineer",
   description: "Engenharia de Software & Inteligência de Dados",
 };
 
-// 3. Componente RootLayout (Export padrão obrigatório)
 export default function RootLayout({
   children,
 }: {
