@@ -1,158 +1,113 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { Mail, Send, Linkedin, Smartphone, ArrowRight, Globe2 } from "lucide-react"
-import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { Badge } from "@/components/ui/badge"
+import { Send, FileText, Smartphone, Sigma, Linkedin, Github } from "lucide-react"
 import { useLanguage } from "@/components/providers"
 
 export function ContactSection() {
   const { t } = useLanguage()
   
-  const email = "b.kleuvyn@gmail.com"
   const whatsappLink = "https://wa.me/5561984660734?text=" + encodeURIComponent(
     t.language === 'PT' 
-      ? "Olá! Vi seu portfólio e gostaria de um orçamento para um projeto." 
-      : "Hello! I saw your portfolio and would like to request a quote for a project."
+      ? "Olá Beatryz! Gostaria de falar sobre projetos e tecnologia." 
+      : "Hello Beatryz! I would like to chat about projects and technology."
   )
-  const linkedinUrl = "https://www.linkedin.com/in/beatryz-kleuvyn-467a23198/"
 
   return (
-    <section id="contato" className="relative py-24 lg:py-32 overflow-hidden bg-background">
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-[radial-gradient(circle_at_center,rgba(var(--primary-rgb),0.05),transparent_70%)] -z-10" />
+    <section id="contato" className="relative py-32 overflow-hidden bg-[#3B2E4D] text-[#FCFAFF]">
+      
+      {/* Background Editorial Noise */}
+      <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-10 mix-blend-overlay" />
+      
+      {/* Gigantic Math Background Symbol */}
+      <div className="absolute top-0 right-0 text-[30vw] font-serif text-background/5 select-none leading-none -translate-y-1/4 translate-x-1/4 pointer-events-none">
+        &pi;
+      </div>
 
-      <div className="container mx-auto px-6">
-        <div className="max-w-5xl mx-auto">
+      <div className="container mx-auto px-6 relative z-10">
+        <div className="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-end gap-16 border-b border-border/20 pb-20">
           
+          {/* Header / Big Text */}
           <motion.div 
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, x: -50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            className="text-center mb-16 space-y-6"
+            className="flex-1"
           >
-            <Badge variant="outline" className="border-primary/30 text-primary px-4 py-1 uppercase tracking-[0.2em] text-[10px] font-bold">
-              {t.contact.badge}
-            </Badge>
-            
-            <h2 className="text-5xl lg:text-7xl font-bold tracking-tighter text-foreground">
-              {t.contact.title_part1} <br />
-              <span className="text-primary italic font-serif">{t.contact.title_part2}</span>
+            <div className="flex items-center gap-4 mb-10">
+              <div className="h-[1px] w-12 bg-primary/60" />
+              <span className="text-[10px] font-bold uppercase tracking-[0.4em] text-primary/80">
+                {t.language === 'PT' ? 'Epílogo' : 'Epilogue'}
+              </span>
+            </div>
+
+            <h2 className="text-6xl md:text-8xl font-bold tracking-tighter mb-8 leading-[0.9]">
+              <span className="font-serif italic text-primary/90 font-light mr-4">{t.contact.title_part1}</span>
+              <br className="md:hidden" />
+              <span className="text-background">{t.contact.title_part2}.</span>
             </h2>
-            
-            <p className="text-lg lg:text-xl text-muted-foreground font-light leading-relaxed max-w-2xl mx-auto">
+
+            <p className="text-xl md:text-2xl text-background/60 font-serif font-light max-w-xl">
               {t.contact.description}
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-3 gap-6 mb-16">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.1 }}
-              viewport={{ once: true }}
-            >
-              <Card className="h-full bg-card/40 backdrop-blur-xl border-2 border-green-500/20 hover:border-green-500/50 transition-all duration-500 hover:shadow-2xl hover:shadow-green-500/5 group relative overflow-hidden">
-                <CardHeader className="space-y-4 pb-4">
-                  <div className="w-12 h-12 rounded-xl bg-green-500/10 flex items-center justify-center group-hover:scale-110 transition-all duration-500">
-                    <Smartphone className="h-6 w-6 text-green-500" />
-                  </div>
-                  <div>
-                    <CardTitle className="text-xl font-bold">{t.contact.whatsapp_title}</CardTitle>
-                    <CardDescription>{t.contact.whatsapp_desc}</CardDescription>
-                  </div>
-                </CardHeader>
-                <CardContent>
-                  <a href={whatsappLink} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-green-600 hover:text-green-500 font-bold transition-all group/link">
-                    {t.contact.whatsapp_cta}
-                    <ArrowRight className="h-4 w-4 group-hover/link:translate-x-1 transition-transform" />
-                  </a>
-                </CardContent>
-              </Card>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.2 }}
-              viewport={{ once: true }}
-            >
-              <Card className="h-full bg-card/40 backdrop-blur-xl border-2 border-muted hover:border-primary/40 transition-all duration-500 group relative overflow-hidden">
-                <CardHeader className="space-y-4 pb-4">
-                  <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center group-hover:scale-110 transition-all duration-500">
-                    <Mail className="h-6 w-6 text-primary" />
-                  </div>
-                  <div>
-                    <CardTitle className="text-xl font-bold">{t.contact.email_title}</CardTitle>
-                    <CardDescription>{t.contact.email_desc}</CardDescription>
-                  </div>
-                </CardHeader>
-                <CardContent>
-                  <a href={`mailto:${email}`} className="text-primary hover:text-primary/80 font-semibold break-all text-sm transition-colors underline-offset-4 hover:underline">
-                    {email}
-                  </a>
-                </CardContent>
-              </Card>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.3 }}
-              viewport={{ once: true }}
-            >
-              <Card className="h-full bg-card/40 backdrop-blur-xl border-2 border-muted hover:border-blue-500/40 transition-all duration-500 group relative overflow-hidden">
-                <CardHeader className="space-y-4 pb-4">
-                  <div className="w-12 h-12 rounded-xl bg-blue-500/10 flex items-center justify-center group-hover:scale-110 transition-all duration-500">
-                    <Linkedin className="h-6 w-6 text-blue-500" />
-                  </div>
-                  <div>
-                    <CardTitle className="text-xl font-bold">{t.contact.linkedin_title}</CardTitle>
-                    <CardDescription>{t.contact.linkedin_desc}</CardDescription>
-                  </div>
-                </CardHeader>
-                <CardContent>
-                  <a href={linkedinUrl} target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-500 font-bold inline-flex items-center gap-2 transition-all">
-                    {t.contact.linkedin_cta}
-                  </a>
-                </CardContent>
-              </Card>
-            </motion.div>
-          </div>
-
-          <motion.div 
-            initial={{ opacity: 0, scale: 0.95 }}
-            whileInView={{ opacity: 1, scale: 1 }}
+          {/* Socials / Direct CTA Box */}
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
             viewport={{ once: true }}
-            className="flex flex-col items-center space-y-8"
+            className="w-full md:w-[400px] flex-shrink-0"
           >
-            <Button
-              size="lg"
-              className="h-16 px-10 text-lg shadow-[0_0_30px_rgba(var(--primary-rgb),0.3)] hover:shadow-[0_0_50px_rgba(var(--primary-rgb),0.5)] transition-all duration-500 rounded-full bg-primary text-primary-foreground font-bold group relative overflow-hidden"
-              asChild
-            >
-              <a href={whatsappLink} target="_blank" rel="noopener noreferrer">
-                <span className="relative z-10 flex items-center gap-3">
-                  <Send className="h-5 w-5 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-300" />
-                  {t.contact.main_cta}
-                </span>
-              </a>
-            </Button>
+            {/* Editorial Contact Card */}
+            <div className="bg-background/5 p-10 border border-background/10 backdrop-blur-md">
+              <div className="flex items-center justify-between mb-10 pb-10 border-b border-background/10">
+                 <div>
+                    <h3 className="text-xs uppercase tracking-[0.3em] font-bold text-background/60 mb-2">Available For</h3>
+                    <p className="font-serif text-xl italic text-primary">Freelance & Tech Lead</p>
+                 </div>
+                 <Sigma className="w-8 h-8 text-primary/40" />
+              </div>
 
-            <div className="flex flex-wrap items-center justify-center gap-6 text-sm text-muted-foreground font-medium uppercase tracking-widest">
-              <span className="flex items-center gap-2">
-                <span className="relative flex h-2 w-2">
-                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
-                  <span className="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
-                </span>
-                {t.contact.status_available}
-              </span>
-              <span className="flex items-center gap-2">
-                <Globe2 className="h-4 w-4" />
-                {t.contact.status_global}
-              </span>
+              <div className="space-y-6">
+                <a href={whatsappLink} target="_blank" rel="noopener noreferrer" className="group flex items-center justify-between text-background/80 hover:text-primary transition-colors">
+                  <span className="text-xs uppercase tracking-[0.2em] font-bold flex items-center gap-4">
+                    <Smartphone className="w-4 h-4" /> WhatsApp
+                  </span>
+                  <span className="font-serif italic">(61) 98466-0734</span>
+                </a>
+                
+                <a href="mailto:b.kleuvyn@gmail.com" className="group flex items-center justify-between text-background/80 hover:text-primary transition-colors">
+                  <span className="text-xs uppercase tracking-[0.2em] font-bold flex items-center gap-4">
+                    <Send className="w-4 h-4" /> E-mail
+                  </span>
+                  <span className="font-serif italic">b.kleuvyn@gmail.com</span>
+                </a>
+
+                <a href="/curriculo.pdf" target="_blank" rel="noopener noreferrer" className="group flex items-center justify-between text-background/80 hover:text-primary transition-colors">
+                  <span className="text-xs uppercase tracking-[0.2em] font-bold flex items-center gap-4">
+                    <FileText className="w-4 h-4" /> Resumo
+                  </span>
+                  <span className="font-serif italic">Curriculo.pdf</span>
+                </a>
+              </div>
             </div>
           </motion.div>
+        </div>
+
+        {/* Footer / Copyright */}
+        <div className="mt-10 flex flex-col md:flex-row items-center justify-between gap-6 opacity-60 text-xs uppercase tracking-[0.2em] font-bold">
+           <p>&copy; {new Date().getFullYear()} Beatryz Kleuvyn. {t.language === 'PT' ? 'Lógica aplicada' : 'Applied Logic'}.</p>
+           <div className="flex gap-6">
+              <a href="https://github.com/kleuvyn" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors flex items-center gap-2">
+                 <Github className="w-3 h-3" /> Github
+              </a>
+              <a href="https://www.linkedin.com/in/beatryz-kleuvyn-467a23198/" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors flex items-center gap-2">
+                 <Linkedin className="w-3 h-3" /> LinkedIn
+              </a>
+           </div>
         </div>
       </div>
     </section>

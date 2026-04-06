@@ -1,178 +1,220 @@
 "use client"
-import { motion } from "framer-motion"
+
 import { ProjectCard } from "@/components/project-card"
-import { Badge } from "@/components/ui/badge"
-import { Sparkles } from "lucide-react"
-import { useLanguage } from "@/components/providers" // Importando seu hook de tradução
+import { useLanguage } from "@/components/providers"
+import { motion } from "framer-motion"
 
 export function ProjectsGrid() {
-  const { t, language } = useLanguage()
+  const { t } = useLanguage()
 
   const projects = [
     {
-      id: 8,
-      title: "Meu Inglês Possível",
-      description: language === 'PT' 
-        ? "Mentor de conversação impulsionado por IA (NLP) com análise preditiva de gramática e vocabulário em tempo real. Desenvolvido para democratizar o aprendizado de idiomas com feedback instantâneo."
-        : "AI-driven conversation mentor (NLP) with real-time grammar and vocabulary predictive analysis. Developed to democratize language learning.",
-      image: "/ingles.png",
-      tags: ["Next.js", "AI SDK", "OpenAI", "Tailwind"],
-      role: "Em breve", 
-      link: "https://lingo-master-ai.vercel.app",
-      github: "https://github.com/kleuvyn/lingo-master-ai",
+      title: "Clube das Leitoras",
+      description: "Plataforma comunitária para amantes da leitura compartilharem experiências e debaterem suas literaturas favoritas.",
+      image: "/clubedasleitoras.png",
+      tags: ["Next.js", "Comunidade", "Literatura"],
+      githubUrl: "#",
+      liveUrl: "#",
+      role: "Full Stack Developer",
+      challenge: "Desbravar e simplificar a conexão contínua entre leitores, fomentando um espaço virtual engajado para debates profundos e resenhas sem ruídos sociais.",
+      architecture: "Construção de uma rede comunitária escalável. Ecossistema estruturado em Next.js para renderização tática, unindo fluxo de fóruns imersivos ao design focado em leitura.",
+      impact: "Fortificou laços entre leitores apaixonados e democratizou discussões enriquecedoras, gerando um polo autônomo constante de troca de literatura."
     },
     {
-      id: 4,
+      title: "Cebrapol",
+      description: "Somos uma comunidade comprometida com o desenvolvimento humano, produzindo e disseminando conhecimento a partir de uma perspectiva global do Complexo Estado-Sociedade, fomentando a consolidação democrática e a participação na vida política.",
+      image: "/cebrapol.png",
+      tags: ["PWA", "Admin", "Analytics", "PostgreSQL"],
+      githubUrl: "https://github.com/Cebrapol/",
+      liveUrl: "#",
+      role: "Full Stack Developer",
+      challenge: "Ser um instrumento que dissemina instantaneamente o conhecimento global do Complexo Social fomentando a participação acadêmica ativa.",
+      architecture: "Plataforma dashboard inteira reativa conectada ativamente na latência real usando métricas pesadas de tabelas geográficas atrelando Painéis Analytics consumidos online ou off (PWA).",
+      impact: "Unificando milhares de frentes operacionais em um hub central."
+    },
+    {
       title: "Calendário Literário",
-      description: language === 'PT'
-        ? "Web App (PWA) de alta performance para gestão de leitura. Implementação de Canvas API para geração dinâmica de assets visuais e arquitetura offline-first para sincronização de metas."
-        : "High-performance Web App (PWA) for reading management. Canvas API implementation for dynamic visual assets and offline-first architecture.",
+      description: "O tempo e as suas leituras. Seu calendário literário digital. Registre seus dias lidos, organize suas metas anuais e acompanhe seu progresso de leitura mês a mês.",
       image: "/calendario.png",
       tags: ["Next.js", "PWA", "Canvas API", "Tailwind"],
+      githubUrl: "https://github.com/kleuvyn/Calendario_Literario",
+      liveUrl: "#",
       role: "Full Stack Developer",
-      link: "https://calendario-literario.vercel.app",
-      github: "https://github.com/kleuvyn/Calendario_Literario",
+      challenge: "Acompanhe sua constância de leitura diária. Defina e visualize seus objetivos anuais numa estética de diário para Notas e Resenhas.",
+      architecture: "Web App (PWA) de alta performance para gestão de leitura. Implementação de Canvas API para geração dinâmica de assets visuais e arquitetura offline-first para sincronização de metas.",
+      impact: "A aplicação recriou o vínculo afetivo dos cadernos de leitura num ambiente digital reativo."
     },
     {
-      id: 1,
-      title: "Chatbot IA - Ritmos do Coração",
-      description: language === 'PT'
-        ? "Engenharia de conversação para impacto social. Estruturação de fluxos orientados a dados e análise estatística textual para otimizar o suporte humanizado a doadores."
-        : "Conversational engineering for social impact. Data-driven flow structuring for humanized donor support.",
-      image: "/ritmos.png",
-      tags: ["Python", "Dialogflow", "Data Science", "NLP"],
-      role: "Data & AI Specialist",
-      link: "https://ritmos-do-coracao.vercel.app/",
-      github: "https://github.com/kleuvyn/Ritmos-do-Coracao-Chat",
+      title: "Elas nas Exatas",
+      description: "Espaço de apoio e visibilidade onde mulheres compartilham trajetórias e encontram recursos para crescer em STEM.",
+      image: "/elas-nas-exatas.png",
+      tags: ["React", "STEM", "Comunidade", "Acessibilidade"],
+      githubUrl: "https://github.com/kleuvyn/Elas-nas-Exatas",
+      liveUrl: "#",
+      role: "Frontend Developer",
+      challenge: "Criar uma plataforma acolhedora e acessível que atue como ponte de conexão, empoderamento e visibilidade para mulheres em ciência, tecnologia, engenharia e matemática.",
+      architecture: "Desenvolvimento focado em Front-End tático e UX Inclusiva (WCAG), estruturando uma ponte comunitária resiliente e amplamente escalável via componentes React.",
+      impact: "Fomenta a representatividade e a troca de saberes, construindo uma rede de apoio prática."
     },
     {
-      id: 9,
-      title: "Plataforma PDV - IESB",
-      description: language === 'PT'
-        ? "Liderança técnica na arquitetura de um sistema de Ponto de Venda (POS) escalável. Desenvolvimento full-cycle focado em performance transacional e impacto comunitário."
-        : "Technical leadership in a scalable POS system architecture. Full-cycle development focused on transactional performance.",
-      image: "/pdv.png",
-      tags: ["React", "Node.js", "Prisma", "Docker"],
-      role: "Tech Lead/Full Stack Developer",
-      link: "https://github.com/fabrica-bayarea/pdv-back",
-      github: "https://github.com/fabrica-bayarea/pdv-back",
+      title: "Psicóloga Beatriz M. Waltz",
+      description: "Landing Page para a psicóloga Beatriz M. Waltz, focada em Terapia Cognitivo-Comportamental, unindo design acolhedor e alta performance.",
+      image: "/psiciloga.png",
+      tags: ["Next.js", "TypeScript", "Tailwind CSS", "SEO"],
+      githubUrl: "https://github.com/kleuvyn/Psiciloga-Clinica",
+      liveUrl: "#",
+      role: "Front-end Developer",
+      challenge: "Foco em acessibilidade, SEO e uma interface intuitiva para facilitar o contato e agendamento de pacientes.",
+      architecture: "Projeto desenvolvido com Next.js, TypeScript e Tailwind CSS, unindo design acolhedor e alta performance.",
+      impact: "A aliança entre acolhimento visual e otimização gerou maior retenção orgânica, otimizando integralmente o fluxo de chamadas."
     },
     {
-      id: 2,
-      title: "Mapa Cultural de Brasília",
-      description: language === 'PT'
-        ? "Solução geoespacial interativa para mapeamento de ecossistemas culturais. Organização de Big Data regional em uma interface intuitiva e responsiva."
-        : "Interactive geospatial solution for mapping cultural ecosystems and regional Big Data organization.",
-      image: "/guia-cultural.png",
-      tags: ["Next.js", "TypeScript", "Google Maps API"],
-      role: "Full Stack Engineer",
-      link: "https://mapa-cultural-de-brasilia.vercel.app/",
-      github: "https://github.com/kleuvyn/Mapa-Cultural-de-Brasilia",
-    },
-    {
-      id: 7,
-      title: "Vida Ativa",
-      description: language === 'PT'
-        ? "Plataforma resiliente focada em segurança e empoderamento feminino. Arquitetura orientada à privacidade com fluxos de suporte especializados e UX de acolhimento."
-        : "Resilient platform focused on safety and female empowerment with privacy-oriented architecture.",
-      image: "/vida-ativa.png",
-      tags: ["Next.js", "Security", "Social Impact"],
-      role: "Em Breve",
-      link: "#",
-      github: "https://github.com/kleuvyn/Vida-Ativa",
-    },
-    {
-      id: 3,
-      title: "Encaixe Certo",
-      description: language === 'PT'
-        ? "Engine de análise ocupacional que utiliza processamento de dados para identificar gaps de habilidades e tendências de mercado no setor tecnológico."
-        : "Occupational analysis engine using data processing to identify skill gaps and market trends.",
-      image: "/encaixe-certo.png",
-      tags: ["React", "Node.js", "Data Analytics"],
-      role: "Data Engineer / Dev",
-      link: "https://encaixe-certo.vercel.app/",
-      github: "https://github.com/kleuvyn/Encaixe-Certo",
-    },
-    {
-      id: 5,
-      title: "Conquista Diária",
-      description: language === 'PT'
-        ? "Sistemas de gestão de aprendizado gamificado (LMS). Implementação de algoritmos de cronogramas personalizados e gestão de progresso dinâmico."
-        : "Gamified learning management system (LMS). Custom schedule algorithms and dynamic progress management.",
-      image: "/conquista-diaria.png",
-      tags: ["Next.js", "PostgreSQL", "Auth.js"],
-      role: "Em Breve",
-      link: "#",
-      github: "https://github.com/kleuvyn/Conquista_Diaria",
-    },
-    {
-      id: 6,
       title: "Raízes de Cuidado",
-      description: language === 'PT'
-        ? "Desenvolvimento institucional otimizado para SEO e conversão de serviços psicológicos, priorizando acessibilidade (WCAG) e experiência do usuário (UX)."
-        : "Institutional development optimized for SEO and conversion of psychological services.",
+      description: "Plataforma online de agendamentos focada na assistência, na ajuda à vida e no cuidado com a mulher.",
       image: "/psi-amanda.png",
       tags: ["React", "SEO", "Accessibility"],
+      githubUrl: "https://github.com/kleuvyn/Raizes-de-Cuidado-Psi-Amanda-",
+      liveUrl: "#",
       role: "Em Breve",
-      link: "#",
-      github: "https://github.com/kleuvyn/Raizes-de-Cuidado-Psi-Amanda-",
+      challenge: "Estruturar o sensível ecossistema ambulatorial online para a Saúde Vital Feminina garantindo conforto na experiência de marcações.",
+      architecture: "Desenvolvimento institucional otimizado para SEO e conversão de serviços psicológicos, priorizando acessibilidade (WCAG) e experiência do usuário (UX).",
+      impact: "Transparência total nos acessos de terapia, destravando canais fundamentais para a rede metódica de zelo."
     },
+    {
+      title: "Chatbot IA - Ritmos do Coração",
+      description: "Assistência focada na visibilidade para ajudar ONG local a arrecadar fundos e prover acolhimento aos envolvidos.",
+      image: "/ritmos.png",
+      tags: ["Python", "Dialogflow", "Data Science", "NLP"],
+      githubUrl: "https://github.com/kleuvyn/Ritmos-do-Coracao",
+      liveUrl: "#",
+      role: "Data & AI Specialist",
+      challenge: "Criar um canal digital humano e eficiente para a ONG, destinado primordialmente a arrecadar fundos e ajudar estrategicamente a atrair visibilidade.",
+      architecture: "Engenharia de conversação para impacto social. Estruturação de fluxos orientados a dados e análise estatística textual para otimizar o suporte humanizado a doadores.",
+      impact: "Cortou dependência massiva manual ao otimizar intelligentemente o suporte diário a doadores."
+    },
+    {
+      title: "Encaixe Certo",
+      description: "Descubra o seu Encaixe Certo no mercado de trabalho. Analise descrições de vagas e visualize as habilidades mais demandadas de forma clara.",
+      image: "/encaixe-certo.png",
+      tags: ["React", "Node.js", "Data Analytics"],
+      githubUrl: "https://github.com/kleuvyn/Encaixe-Certo",
+      liveUrl: "#",
+      role: "Data Engineer / Dev",
+      challenge: "Entender visualmente as distâncias entre os requisitos e identificar as habilidades tecnológicas reais demandadas na rotina.",
+      architecture: "Engine de análise ocupacional que utiliza processamento de dados para identificar gaps de habilidades e tendências de mercado no setor tecnológico.",
+      impact: "Facilitou cirurgicamente a rota educacional do operante Júnior, elucidando tendências do setor tecnológico."
+    },
+    {
+      title: "Mapa Cultural de Brasília",
+      description: "Criei um guia digital interativo para reunir os principais espaços culturais da capital federal: livrarias, sebos, cafés, bibliotecas, teatros.",
+      image: "/guia-cultural.png",
+      tags: ["Next.js", "TypeScript", "Google Maps API"],
+      githubUrl: "https://github.com/kleuvyn/Mapa-Cultural-de-Brasilia",
+      liveUrl: "#",
+      role: "Full Stack Engineer",
+      challenge: "Organizar informações sobre bares de jazz & rock, eventos e espaços kids & ludotecas, facilitando a navegação por categorias e a descoberta de novos lugares.",
+      architecture: "Solução geoespacial interativa para mapeamento de ecossistemas culturais. Organização de Big Data regional em uma interface intuitiva e responsiva.",
+      impact: "Uma vitrine geoespacial intuitiva que unificou uma cidade imensa, democratizando espaços culturais."
+    },
+    {
+      title: "Plataforma PDV - IESB",
+      description: "Plataforma PDV - IESB. Um ponto de vendas robusto e rápido.",
+      image: "/pdv.png",
+      tags: ["React", "Node.js", "Prisma", "Docker"],
+      githubUrl: "#",
+      liveUrl: "#",
+      role: "Tech Lead/Full Stack Developer",
+      challenge: "Liderar a formulação corporativa de uma plataforma comercial PDV escalável focada em impactos da comunidade.",
+      architecture: "Liderança técnica na arquitetura de um sistema de Ponto de Venda (POS) escalável. Desenvolvimento full-cycle focado em performance transacional e impacto comunitário.",
+      impact: "Estabilizou o funil operacional do faturamento mercadológico social da instituição."
+    },
+    {
+      title: "Conquista Diária",
+      description: "O Conquista Diária é um site projetado para ajudar você a criar cronogramas de estudos personalizados, organizar suas matérias e definir metas.",
+      image: "/conquista-diaria.png",
+      tags: ["Next.js", "PostgreSQL", "Auth.js"],
+      githubUrl: "https://github.com/kleuvyn/Conquista_Diaria",
+      liveUrl: "#",
+      role: "Em Breve",
+      challenge: "Celebre suas conquistas diárias na jornada rumo ao conhecimento. Simplifique seu caminho para o sucesso acadêmico conosco.",
+      architecture: "Sistemas de gestão de aprendizado gamificado (LMS). Implementação de algoritmos de cronogramas personalizados e gestão de progresso dinâmico.",
+      impact: "Transformará dores acadêmicas num portal virtual altamente propulsor conectando o estudante ao sucesso educacional."
+    },
+    {
+      title: "Meu Inglês Possível",
+      description: "Mentor autônomo focado em conversação orientado por Inteligência Artificial, com análise em tempo real textual e falada.",
+      image: "/ingles.png",
+      tags: ["Next.js", "AI", "OpenAI", "Tailwind"],
+      githubUrl: "https://github.com/kleuvyn/meu_ingles_possivel",
+      liveUrl: "#",
+      role: "Em Breve",
+      challenge: "Reduzir o constrangimento na hora de cometer erros em idiomas estrangeiros com feedback e ferramentas amigáveis.",
+      architecture: "Uso do Vercel AI SDK como duto central entre modelos GPT em Next.js para manter fluxos rápidos nativos inferindo lógicas audíveis.",
+      impact: "Dá a chance real de qualquer pessoa errar sozinha e ir consertando seu vocabulário fonético com um IA treinador paciente."
+    },
+    {
+      title: "Vida Ativa",
+      description: "Vida Ativa é uma plataforma segura e discreta dedicada a apoiar mulheres em situação de risco.",
+      image: "/vida-ativa.png",
+      tags: ["Pronto/Em Breve", "Security", "Next.js", "Social Impact"],
+      githubUrl: "https://github.com/kleuvyn/Vida-Ativa",
+      liveUrl: "#",
+      role: "Em Breve",
+      challenge: "Por meio de informações confiáveis, recursos acessíveis e uma rede de suporte especializada, oferecemos um espaço de acolhimento, empoderamento e proteção para promover a autonomia feminina e ajudar a transformar vidas.",
+      architecture: "Plataforma resiliente focada em segurança e empoderamento feminino. Arquitetura orientada à privacidade com fluxos de suporte especializados e UX de acolhimento.",
+      impact: "Desenha ser um dos maiores canais locais de proteção feminista isolando riscos e dando fôlego à autonomia e transformando rotinas."
+    }
   ]
 
   return (
-    <section id="projetos" className="relative py-24 lg:py-32 overflow-hidden bg-background">
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full bg-[radial-gradient(circle_at_center,rgba(var(--primary-rgb),0.03),transparent_70%)] -z-10" />
+    <section id="projetos" className="pt-24 pb-48 md:pb-64 bg-background relative overflow-hidden">
+      {/* Background Decorative */}
+      <div className="absolute top-0 right-0 w-64 h-64 bg-[url('https://www.transparenttextures.com/patterns/old-paper.png')] opacity-40 mix-blend-multiply rounded-bl-full" />
       
-      <div className="container mx-auto px-6">
-        <div className="flex flex-col items-center text-center mb-24 space-y-6">
-          <motion.div
-            initial={{ opacity: 0, y: 10 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="flex items-center gap-2"
-          >
-            <div className="h-px w-8 bg-primary/50" />
-            <Badge variant="outline" className="border-primary/20 text-primary px-3 py-1 uppercase tracking-[0.2em] text-[10px] font-bold">
-              Engineering Showcase
-            </Badge>
-            <div className="h-px w-8 bg-primary/50" />
-          </motion.div>
-          
-          <h2 className="text-5xl lg:text-7xl font-bold tracking-tighter text-foreground italic font-serif">
-            {t.projects.title_part1} <span className="not-italic text-primary">{t.projects.title_part2}</span>
-          </h2>
-          
-          <p className="text-muted-foreground text-lg lg:text-xl max-w-2xl font-light leading-relaxed">
-            {t.projects.description}
-          </p>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 xl:gap-12">
-          {projects.map((project, index) => (
-            <motion.div
-              key={project.id}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ delay: index * 0.1, duration: 0.5 }}
-              viewport={{ once: true }}
-            >
-              <ProjectCard project={project} />
-            </motion.div>
-          ))}
-        </div>
-
-        <motion.div 
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          className="mt-24 text-center"
+      <div className="container mx-auto px-6 max-w-[1400px]">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+          className="mb-16 md:mb-24 text-center md:text-left border-b border-border/50 pb-8 flex flex-col md:flex-row justify-between items-end gap-6"
         >
-          <p className="text-sm text-muted-foreground uppercase tracking-widest font-medium flex items-center justify-center gap-2">
-            <Sparkles className="h-4 w-4 text-primary" />
-            {language === 'PT' 
-              ? "Mais projetos sendo desenvolvidos em tempo real no GitHub" 
-              : "More projects being developed in real-time on GitHub"}
+          <div>
+             <h2 className="text-xs font-bold tracking-[0.2em] text-primary uppercase mb-4">
+              {t.language === 'PT' ? 'Capítulo 02 — Case Studies' : 'Chapter 02 — Selected Works'}
+             </h2>
+             <p className="text-4xl md:text-5xl font-serif italic text-foreground tracking-tight">
+               {t.language === 'PT' ? 'Lógica & Arquitetura.' : 'Logic & Architecture.'}
+             </p>
+          </div>
+          <p className="text-sm font-sans uppercase tracking-[0.2em] text-muted-foreground">
+             {projects.length.toString().padStart(2, '0')}—Projects
           </p>
         </motion.div>
+
+        {/* SCRAPBOOK MASONRY LAYOUT */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-24 lg:gap-y-32 pb-32">
+          {projects.map((project, index) => (
+             <motion.div
+               key={project.title}
+               initial={{ opacity: 0, y: 100, scale: 0.95 }}
+               whileInView={{ opacity: 1, y: 0, scale: 1 }}
+               transition={{ 
+                 duration: 0.8, 
+                 ease: "easeOut",
+                 delay: (index % 3) * 0.1 
+               }}
+               viewport={{ once: false, margin: "-50px" }}
+               className={`w-full ${
+                  index % 3 === 0 ? "lg:translate-y-0" : 
+                  index % 3 === 1 ? "md:translate-y-16 lg:translate-y-24" : 
+                  "lg:translate-y-48"
+               }`}
+             >
+                <ProjectCard {...project} />
+             </motion.div>
+          ))}
+        </div>
       </div>
     </section>
   )

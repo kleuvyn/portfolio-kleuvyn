@@ -1,12 +1,287 @@
-[00:00:01.065] Server  LOG      ✓ Ready in 675ms
-[00:00:07.339] Server  LOG      ○ Compiling / ...
-[00:00:09.650] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:00:37.202] Server  LOG      ✓ Compiled in 99ms
-[00:00:41.114] Server  LOG      ✓ Compiled in 76ms
-[00:00:43.199] Server  LOG      ✓ Compiled in 77ms
-[00:00:46.877] Server  LOG      ✓ Compiled in 74ms
-[00:00:52.068] Server  LOG      ✓ Compiled in 85ms
-[00:00:58.187] Server  LOG      ✓ Compiled in 71ms
-[00:01:00.637] Server  LOG      ✓ Compiled in 66ms
-[00:01:03.942] Server  LOG      ✓ Compiled in 57ms
-[00:01:13.792] Server  LOG      ✓ Compiled in 74ms
+[00:00:00.996] Server  LOG      ✓ Ready in 629ms
+[00:00:11.091] Server  LOG      ○ Compiling / ...
+[00:00:13.544] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:00:13.959] Browser ERROR   uncaughtError: Error: Hydration failed because the server rendered text didn't match the client. As a result this tree will be regenerated on the client. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+https://react.dev/link/hydration-mismatch
+
+  ...
+    <SegmentViewNode type="page" pagePath="page.tsx">
+      <SegmentTrieNode>
+      <Home>
+        <Navbar>
+        <Home>
+          <main className="min-h-screen">
+            <div>
+            <AboutSection>
+            <ProjectsGrid>
+              <section id="projetos" className="relative p...">
+                <div>
+                <div className="container ...">
+                  <div>
+                  <div className="grid grid-...">
+                    <motion.div initial={{opacity:0,y:20}} whileInView={{opacity:1,y:0}} transition={{delay:0, ...}} ...>
+                      <div style={{opacity:0, ...}} ref={function useMotionRef.useCallback}>
+                        <ProjectCard project={{id:8,title:"Me...", ...}}>
+                          <Card className="group rela...">
+                            <div data-slot="card" className="text-card-...">
+                              <div className="relative w...">
+                                <a
++                                 href="https://lingo-master-ai.vercel.app"
+-                                 href="https://cebrapol.net.br/"
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                  className="block w-full h-full cursor-pointer"
+                                >
+                                  <img
++                                   alt="Meu Inglês Possível"
+-                                   alt="Cebrapol"
+                                    fetchPriority={undefined}
+                                    loading="lazy"
+                                    width={undefined}
+                                    height={undefined}
+                                    decoding="async"
+                                    data-nimg="fill"
+                                    className="object-cover group-hover:scale-105 transition-transform duration-1000 e..."
+                                    style={{position:"absolute",height:"100%",width:"100%",left:0,top:0,right:0,bottom:0,objectFit:undefined, ...}}
+                                    sizes={undefined}
+                                    srcSet={undefined}
++                                   src="/ingles.png"
+-                                   src="/cebrapol.png"
+                                    ref={function}
+                                    onLoad={function onLoad}
+                                    onError={function onError}
+                                  >
+                                  ...
+                              <CardHeader className="space-y-4 ...">
+                                <div data-slot="card-header" className="@container...">
+                                  <div className="flex justi...">
+                                    <Badge variant="outline" className="text-[9px]...">
+                                      <span
+                                        data-slot="badge"
+                                        className={"inline-flex items-center justify-center rounded-md border px-2 py..."}
+                                      >
++                                       Em breve
+-                                       Full Stack Developer
+                                    ...
+                                  ...
+                              ...
+                    ...
+                  ...
+            ...
+        ...
+    ...
+
+[00:00:14.874] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:00:58.809] Browser WARN    Image with src "http://localhost:3000/elas-nas-exatas.png" has "fill" and parent element with invalid "position". Provided "static" should be one of absolute,fixed,relative.
+[00:00:58.809] Browser WARN    Image with src "http://localhost:3000/cebrapol.png" has "fill" and parent element with invalid "position". Provided "static" should be one of absolute,fixed,relative.
+[00:00:58.809] Browser WARN    Image with src "http://localhost:3000/clubedasleitoras.png" has "fill" and parent element with invalid "position". Provided "static" should be one of absolute,fixed,relative.
+[00:00:59.303] Browser WARN    Image with src "http://localhost:3000/ingles.png" has "fill" and parent element with invalid "position". Provided "static" should be one of absolute,fixed,relative.
+[00:00:59.303] Browser WARN    Image with src "http://localhost:3000/calendario.png" has "fill" and parent element with invalid "position". Provided "static" should be one of absolute,fixed,relative.
+[00:00:59.303] Browser WARN    Image with src "http://localhost:3000/ritmos.png" has "fill" and parent element with invalid "position". Provided "static" should be one of absolute,fixed,relative.
+[00:00:59.936] Browser WARN    Image with src "http://localhost:3000/pdv.png" has "fill" and parent element with invalid "position". Provided "static" should be one of absolute,fixed,relative.
+[00:00:59.936] Browser WARN    Image with src "http://localhost:3000/vida-ativa.png" has "fill" and parent element with invalid "position". Provided "static" should be one of absolute,fixed,relative.
+[00:00:59.937] Browser WARN    Image with src "http://localhost:3000/guia-cultural.png" has "fill" and parent element with invalid "position". Provided "static" should be one of absolute,fixed,relative.
+[00:02:40.444] Server  LOG      ✓ Compiled in 146ms
+[00:03:19.379] Browser WARN    Image with src "http://localhost:3000/conquista-diaria.png" has "fill" and parent element with invalid "position". Provided "static" should be one of absolute,fixed,relative.
+[00:03:19.379] Browser WARN    Image with src "http://localhost:3000/psiciloga.png" has "fill" and parent element with invalid "position". Provided "static" should be one of absolute,fixed,relative.
+[00:03:19.379] Browser WARN    Image with src "http://localhost:3000/encaixe-certo.png" has "fill" and parent element with invalid "position". Provided "static" should be one of absolute,fixed,relative.
+[00:07:47.756] Server  LOG      ✓ Compiled in 355ms
+[00:08:02.064] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:08:02.484] Browser WARN    Image with src "http://localhost:3000/cebrapol.png" has "fill" and parent element with invalid "position". Provided "static" should be one of absolute,fixed,relative.
+[00:08:02.484] Browser WARN    Image with src "http://localhost:3000/elas-nas-exatas.png" has "fill" and parent element with invalid "position". Provided "static" should be one of absolute,fixed,relative.
+[00:08:02.484] Browser WARN    Image with src "http://localhost:3000/clubedasleitoras.png" has "fill" and parent element with invalid "position". Provided "static" should be one of absolute,fixed,relative.
+[00:08:02.484] Browser WARN    Image with src "http://localhost:3000/ingles.png" has "fill" and parent element with invalid "position". Provided "static" should be one of absolute,fixed,relative.
+[00:08:02.484] Browser WARN    Image with src "http://localhost:3000/calendario.png" has "fill" and parent element with invalid "position". Provided "static" should be one of absolute,fixed,relative.
+[00:08:02.484] Browser WARN    Image with src "http://localhost:3000/ritmos.png" has "fill" and parent element with invalid "position". Provided "static" should be one of absolute,fixed,relative.
+[00:08:02.484] Browser WARN    Image with src "http://localhost:3000/pdv.png" has "fill" and parent element with invalid "position". Provided "static" should be one of absolute,fixed,relative.
+[00:08:02.484] Browser WARN    Image with src "http://localhost:3000/encaixe-certo.png" has "fill" and parent element with invalid "position". Provided "static" should be one of absolute,fixed,relative.
+[00:08:02.484] Browser WARN    Image with src "http://localhost:3000/psiciloga.png" has "fill" and parent element with invalid "position". Provided "static" should be one of absolute,fixed,relative.
+[00:08:02.484] Browser WARN    Image with src "http://localhost:3000/conquista-diaria.png" has "fill" and parent element with invalid "position". Provided "static" should be one of absolute,fixed,relative.
+[00:08:02.484] Browser WARN    Image with src "http://localhost:3000/vida-ativa.png" has "fill" and parent element with invalid "position". Provided "static" should be one of absolute,fixed,relative.
+[00:08:02.484] Browser WARN    Image with src "http://localhost:3000/guia-cultural.png" has "fill" and parent element with invalid "position". Provided "static" should be one of absolute,fixed,relative.
+[00:08:21.608] Server  WARN     ⚠ Fast Refresh had to perform a full reload when ./components/providers.tsx changed. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+[00:08:21.849] Server  LOG      ✓ Compiled in 105ms
+[00:08:22.638] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:08:23.003] Browser WARN    Image with src "http://localhost:3000/cebrapol.png" has "fill" and parent element with invalid "position". Provided "static" should be one of absolute,fixed,relative.
+[00:08:23.004] Browser WARN    Image with src "http://localhost:3000/elas-nas-exatas.png" has "fill" and parent element with invalid "position". Provided "static" should be one of absolute,fixed,relative.
+[00:08:23.004] Browser WARN    Image with src "http://localhost:3000/clubedasleitoras.png" has "fill" and parent element with invalid "position". Provided "static" should be one of absolute,fixed,relative.
+[00:08:23.004] Browser WARN    Image with src "http://localhost:3000/ingles.png" has "fill" and parent element with invalid "position". Provided "static" should be one of absolute,fixed,relative.
+[00:08:23.004] Browser WARN    Image with src "http://localhost:3000/calendario.png" has "fill" and parent element with invalid "position". Provided "static" should be one of absolute,fixed,relative.
+[00:08:23.004] Browser WARN    Image with src "http://localhost:3000/ritmos.png" has "fill" and parent element with invalid "position". Provided "static" should be one of absolute,fixed,relative.
+[00:08:23.004] Browser WARN    Image with src "http://localhost:3000/pdv.png" has "fill" and parent element with invalid "position". Provided "static" should be one of absolute,fixed,relative.
+[00:08:23.004] Browser WARN    Image with src "http://localhost:3000/guia-cultural.png" has "fill" and parent element with invalid "position". Provided "static" should be one of absolute,fixed,relative.
+[00:08:23.004] Browser WARN    Image with src "http://localhost:3000/vida-ativa.png" has "fill" and parent element with invalid "position". Provided "static" should be one of absolute,fixed,relative.
+[00:08:23.004] Browser WARN    Image with src "http://localhost:3000/encaixe-certo.png" has "fill" and parent element with invalid "position". Provided "static" should be one of absolute,fixed,relative.
+[00:08:23.004] Browser WARN    Image with src "http://localhost:3000/conquista-diaria.png" has "fill" and parent element with invalid "position". Provided "static" should be one of absolute,fixed,relative.
+[00:08:23.004] Browser WARN    Image with src "http://localhost:3000/psiciloga.png" has "fill" and parent element with invalid "position". Provided "static" should be one of absolute,fixed,relative.
+[00:08:41.480] Server  LOG      ✓ Compiled in 276ms
+[00:09:28.219] Server  LOG      ✓ Compiled in 310ms
+[00:10:26.488] Server  LOG      ✓ Compiled in 375ms
+[00:10:36.400] Browser ERROR   uncaughtError: TypeError: can't access property "map", tags is undefined
+[00:10:49.940] Server  WARN     ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[00:10:49.964] Server  LOG      ✓ Compiled in 265ms
+[00:10:51.291] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:11:06.522] Server  LOG      ✓ Compiled in 263ms
+[00:11:06.655] Browser ERROR   uncaughtError: TypeError: can't access property "split", t.about.title is undefined
+[00:11:50.822] Server  ERROR    ⨯ TypeError: Cannot read properties of undefined (reading 'split')
+[00:11:51.153] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:11:51.390] Browser ERROR   uncaughtError: TypeError: can't access property "split", t.about.title is undefined
+[00:12:34.159] Server  WARN     ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[00:12:34.179] Server  LOG      ✓ Compiled in 82ms
+[00:12:35.029] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:14:51.652] Server  WARN     ⚠ Fast Refresh had to perform a full reload when ./components/providers.tsx changed. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+[00:14:51.877] Server  LOG      ✓ Compiled in 100ms
+[00:14:52.741] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:15:28.974] Server  LOG      ✓ Compiled in 125ms
+[00:17:24.329] Server  LOG      ✓ Compiled in 99ms
+[00:17:58.321] Server  LOG      ✓ Compiled in 84ms
+[00:21:02.669] Server  LOG      ✓ Compiled in 94ms
+[00:26:06.886] Server  LOG      ✓ Compiled in 265ms
+[00:26:24.806] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:27:03.276] Server  LOG      ✓ Compiled in 324ms
+[00:27:21.617] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:28:28.731] Server  LOG      ✓ Compiled in 258ms
+[00:28:41.804] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:28:55.004] Server  LOG      ✓ Compiled in 286ms
+[00:30:41.391] Server  LOG      ✓ Compiled in 0ms
+[00:30:42.066] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:32:50.825] Server  LOG      ✓ Compiled in 260ms
+[00:32:59.156] Server  WARN     ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:3000". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
+[00:32:59.898] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:33:15.815] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:33:26.195] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:34:24.684] Server  LOG      ✓ Compiled in 258ms
+[00:34:37.952] Server  WARN     ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:3000". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
+[00:34:38.528] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:34:45.258] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:35:43.611] Server  LOG      ✓ Compiled in 248ms
+[00:35:51.149] Server  LOG      ✓ Compiled in 233ms
+[00:36:02.015] Server  LOG      ✓ Compiled in 281ms
+[00:36:07.761] Server  WARN     ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:3000". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
+[00:37:11.930] Server  LOG      ✓ Compiled in 109ms
+[00:38:03.692] Server  LOG      ✓ Compiled in 275ms
+[00:38:08.212] Server  LOG      ✓ Compiled in 90ms
+[00:38:44.284] Server  LOG      ✓ Compiled in 243ms
+[00:39:19.950] Server  LOG      ✓ Compiled in 263ms
+[00:39:32.612] Server  WARN     ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:3000". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
+[00:39:33.327] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:41:48.420] Server  LOG      ✓ Compiled in 94ms
+[00:41:55.457] Server  LOG      ✓ Compiled in 96ms
+[00:42:01.672] Server  LOG      ✓ Compiled in 92ms
+[00:42:07.315] Server  LOG      ✓ Compiled in 119ms
+[00:42:12.838] Server  LOG      ✓ Compiled in 106ms
+[00:42:18.448] Server  LOG      ✓ Compiled in 87ms
+[00:42:23.805] Server  LOG      ✓ Compiled in 106ms
+[00:42:58.131] Server  LOG      ✓ Compiled in 96ms
+[00:43:32.897] Server  LOG      ✓ Compiled in 118ms
+[00:44:13.736] Server  LOG      ✓ Compiled in 97ms
+[00:46:22.701] Server  LOG      ✓ Compiled in 97ms
+[00:46:58.512] Server  LOG      ✓ Compiled in 128ms
+[00:47:25.210] Server  LOG      ✓ Compiled in 138ms
+[00:49:29.639] Server  LOG      ✓ Compiled in 388ms
+[00:49:36.352] Server  LOG      ✓ Compiled in 216ms
+[00:50:37.330] Server  LOG      ✓ Compiled in 75ms
+[00:50:44.897] Server  LOG      ✓ Compiled in 256ms
+[00:51:41.926] Server  LOG      ✓ Compiled in 223ms
+[00:52:27.401] Server  LOG      ✓ Compiled in 238ms
+[00:54:16.765] Server  WARN     ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:3000". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
+[00:54:26.532] Server  LOG      ✓ Compiled in 245ms
+[00:54:44.067] Server  WARN     ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:3000". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
+[00:54:48.637] Server  WARN     ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:3000". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
+[00:54:49.425] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:55:32.044] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:56:18.772] Browser WARN    Warning: Missing `Description` or `aria-describedby={undefined}` for {DialogContent}.
+[00:56:18.772] Browser WARN    Warning: Missing `Description` or `aria-describedby={undefined}` for {DialogContent}.
+[00:56:43.800] Browser WARN    Warning: Missing `Description` or `aria-describedby={undefined}` for {DialogContent}.
+[00:56:43.800] Browser WARN    Warning: Missing `Description` or `aria-describedby={undefined}` for {DialogContent}.
+[00:56:57.864] Browser WARN    Warning: Missing `Description` or `aria-describedby={undefined}` for {DialogContent}.
+[00:56:57.864] Browser WARN    Warning: Missing `Description` or `aria-describedby={undefined}` for {DialogContent}.
+[00:57:05.735] Browser WARN    Warning: Missing `Description` or `aria-describedby={undefined}` for {DialogContent}.
+[00:57:05.735] Browser WARN    Warning: Missing `Description` or `aria-describedby={undefined}` for {DialogContent}.
+[00:57:10.878] Browser WARN    Warning: Missing `Description` or `aria-describedby={undefined}` for {DialogContent}.
+[00:57:10.878] Browser WARN    Warning: Missing `Description` or `aria-describedby={undefined}` for {DialogContent}.
+[00:59:02.101] Browser WARN    Warning: Missing `Description` or `aria-describedby={undefined}` for {DialogContent}.
+[00:59:02.101] Browser WARN    Warning: Missing `Description` or `aria-describedby={undefined}` for {DialogContent}.
+[00:59:13.712] Server  LOG      ✓ Compiled in 118ms
+[00:59:40.229] Server  LOG      ✓ Compiled in 265ms
+[01:06:13.193] Browser WARN    Warning: Missing `Description` or `aria-describedby={undefined}` for {DialogContent}.
+[01:06:13.193] Browser WARN    Warning: Missing `Description` or `aria-describedby={undefined}` for {DialogContent}.
+[01:07:44.862] Server  LOG      ✓ Compiled in 138ms
+[01:08:17.394] Server  LOG      ✓ Compiled in 111ms
+[01:10:21.083] Server  LOG      ✓ Compiled in 126ms
+[01:10:50.112] Server  WARN     ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:3000". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
+[01:11:59.976] Server  WARN     ⚠ Fast Refresh had to perform a full reload when ./components/providers.tsx changed. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+[01:12:00.179] Server  WARN     ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:3000". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
+[01:12:00.188] Server  LOG      ✓ Compiled in 110ms
+[01:12:00.990] Server  WARN     ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:3000". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
+[01:12:01.208] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[01:12:10.825] Server  WARN     ⚠ Fast Refresh had to perform a full reload when ./components/providers.tsx changed. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+[01:12:10.846] Server  LOG      ✓ Compiled in 92ms
+[01:12:11.088] Server  WARN     ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:3000". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
+[01:12:11.878] Server  WARN     ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:3000". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
+[01:12:12.107] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[01:12:17.556] Server  LOG      ✓ Compiled in 82ms
+[01:12:28.702] Server  LOG      ✓ Compiled in 144ms
+[01:13:25.885] Server  LOG      ✓ Compiled in 88ms
+[01:14:17.670] Server  WARN     ⚠ Fast Refresh had to perform a full reload when ./components/providers.tsx changed. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+[01:14:17.867] Server  WARN     ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:3000". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
+[01:14:17.876] Server  LOG      ✓ Compiled in 109ms
+[01:14:18.656] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[01:15:17.659] Server  WARN     ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:3000". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
+[01:18:35.158] Server  WARN     ⚠ Fast Refresh had to perform a full reload when ./components/providers.tsx changed. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+[01:18:35.178] Server  LOG      ✓ Compiled in 122ms
+[01:18:35.398] Server  WARN     ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:3000". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
+[01:18:36.186] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[01:18:54.918] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[01:20:01.856] Server  LOG      ✓ Compiled in 116ms
+[01:21:35.693] Browser WARN    Warning: Missing `Description` or `aria-describedby={undefined}` for {DialogContent}.
+[01:21:35.694] Browser WARN    Warning: Missing `Description` or `aria-describedby={undefined}` for {DialogContent}.
+[01:21:43.592] Server  LOG      ✓ Compiled in 246ms
+[01:22:04.744] Server  WARN     ⚠ Fast Refresh had to perform a full reload when ./components/providers.tsx changed. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+[01:22:04.965] Server  WARN     ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:3000". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
+[01:22:04.974] Server  LOG      ✓ Compiled in 138ms
+[01:22:05.746] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[01:24:53.583] Browser WARN    Warning: Missing `Description` or `aria-describedby={undefined}` for {DialogContent}.
+[01:24:53.583] Browser WARN    Warning: Missing `Description` or `aria-describedby={undefined}` for {DialogContent}.
+[01:24:57.999] Server  LOG      ✓ Compiled in 270ms
+[01:26:08.902] Server  LOG      ✓ Compiled in 88ms
+[01:26:41.442] Browser WARN    Warning: Missing `Description` or `aria-describedby={undefined}` for {DialogContent}.
+[01:26:41.442] Browser WARN    Warning: Missing `Description` or `aria-describedby={undefined}` for {DialogContent}.
+[01:26:50.663] Server  LOG      ✓ Compiled in 89ms
+[01:26:59.708] Server  LOG      ✓ Compiled in 101ms
+[01:27:26.096] Server  LOG      ✓ Compiled in 141ms
+[01:27:32.389] Browser WARN    Warning: Missing `Description` or `aria-describedby={undefined}` for {DialogContent}.
+[01:27:32.389] Browser WARN    Warning: Missing `Description` or `aria-describedby={undefined}` for {DialogContent}.
+[01:28:11.437] Browser WARN    Warning: Missing `Description` or `aria-describedby={undefined}` for {DialogContent}.
+[01:28:11.437] Browser WARN    Warning: Missing `Description` or `aria-describedby={undefined}` for {DialogContent}.
+[01:28:36.775] Browser WARN    Warning: Missing `Description` or `aria-describedby={undefined}` for {DialogContent}.
+[01:28:36.775] Browser WARN    Warning: Missing `Description` or `aria-describedby={undefined}` for {DialogContent}.
+[01:28:56.393] Browser WARN    Warning: Missing `Description` or `aria-describedby={undefined}` for {DialogContent}.
+[01:28:56.393] Browser WARN    Warning: Missing `Description` or `aria-describedby={undefined}` for {DialogContent}.
+[01:29:17.074] Browser WARN    Warning: Missing `Description` or `aria-describedby={undefined}` for {DialogContent}.
+[01:29:17.074] Browser WARN    Warning: Missing `Description` or `aria-describedby={undefined}` for {DialogContent}.
+[01:29:29.078] Browser WARN    Warning: Missing `Description` or `aria-describedby={undefined}` for {DialogContent}.
+[01:29:29.078] Browser WARN    Warning: Missing `Description` or `aria-describedby={undefined}` for {DialogContent}.
+[01:29:44.281] Browser WARN    Warning: Missing `Description` or `aria-describedby={undefined}` for {DialogContent}.
+[01:29:44.281] Browser WARN    Warning: Missing `Description` or `aria-describedby={undefined}` for {DialogContent}.
+[01:30:02.434] Browser WARN    Warning: Missing `Description` or `aria-describedby={undefined}` for {DialogContent}.
+[01:30:02.435] Browser WARN    Warning: Missing `Description` or `aria-describedby={undefined}` for {DialogContent}.
+[01:30:20.482] Browser WARN    Warning: Missing `Description` or `aria-describedby={undefined}` for {DialogContent}.
+[01:30:20.482] Browser WARN    Warning: Missing `Description` or `aria-describedby={undefined}` for {DialogContent}.
+[01:30:36.053] Browser WARN    Warning: Missing `Description` or `aria-describedby={undefined}` for {DialogContent}.
+[01:30:36.053] Browser WARN    Warning: Missing `Description` or `aria-describedby={undefined}` for {DialogContent}.
+[01:30:47.411] Browser WARN    Warning: Missing `Description` or `aria-describedby={undefined}` for {DialogContent}.
+[01:30:47.412] Browser WARN    Warning: Missing `Description` or `aria-describedby={undefined}` for {DialogContent}.
+[01:31:00.320] Browser WARN    Warning: Missing `Description` or `aria-describedby={undefined}` for {DialogContent}.
+[01:31:00.320] Browser WARN    Warning: Missing `Description` or `aria-describedby={undefined}` for {DialogContent}.
+[01:31:18.402] Browser WARN    Warning: Missing `Description` or `aria-describedby={undefined}` for {DialogContent}.
+[01:31:18.402] Browser WARN    Warning: Missing `Description` or `aria-describedby={undefined}` for {DialogContent}.

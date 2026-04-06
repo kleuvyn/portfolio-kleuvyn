@@ -22,171 +22,225 @@ const translations = {
     PT: {
         language: 'PT',
         nav: {
-            projects: "Projetos",
-            about: "Sobre",
+            projects: "Portfólio",
+            about: "Trajetória",
             contact: "Contato",
-            cta: "Fale Comigo"
+            cta: "Currículo"
         },
         hero: {
-            badge: "Disponível para projetos freelance",
+            badge: "Lógica, Dados & Engenharia de Software",
             title_part1: "Beatryz",
-            title_part2: "Kleuvyn",
-            tagline: "Full Stack Developer",
-            description: "Desenvolvendo soluções web completas onde a lógica matemática encontra a tecnologia moderna. Transformo ideias em aplicações reais e funcionais.",
-            cta_primary: "Ver Projetos",
-            cta_secondary: "Vamos Conversar"
+            title_part2: "Kleuvyn.",
+            tagline: "Software Engineer & Data Analyst Jr.",
+            description: "Construindo soluções robustas de ponta-a-ponta fundamentadas no rigor da matemática e da física. Especialista em ciência de dados, IA e arquitetura web escalável.",
+            cta_primary: "Visitar Obras",
+            cta_secondary: "Resumo Profissional"
         },
         about: {
-            badge: "Sobre Mim",
-            title_part1: "Transformando ideias em",
-            title_part2: "Aplicações Reais.",
-            description: "Sou desenvolvedora Full Stack freelancer com sólida formação acadêmica (ADS, Pós em Ciência de Dados/IA e MBA). Trabalho com o stack moderno (React, Next.js, TypeScript e Node.js), criando aplicações completas do frontend ao backend.",
-            trajectory_title: "Experiência & Educação",
-            trajectory_subtitle: "Minha trajetória unindo tecnologia, educação e liderança técnica.",
+            badge: "Perfil Profissional",
+            title_part1: "Rigor Analítico e",
+            title_part2: "Engenharia de Software",
+            description: "Pós-graduada em MBA de Tecnologia para Negócios, Ciência de Dados e Inteligência Artificial, unindo forte expertise acadêmica em formação matemática com desenvolvimento de alto impacto. Da sala de aula ensinando física e filosofia à liderança técnica de sistemas comerciais.",
+            trajectory_title: "Currículo",
+            trajectory_subtitle: "Minha jornada profissional e acadêmica.",
             skills: [
                 {
-                    title: "Desenvolvimento Full Stack",
-                    description: "React, Next.js, TypeScript e Node.js. Aplicações completas do frontend ao backend."
+                    title: "Matemática & Física",
+                    description: "Licencianda. Capacidade avançada de modelagem lógica, abstração de sistemas complexos e otimização de algoritmos."
                 },
                 {
-                    title: "Engenharia de IA",
-                    description: "Implementação de chatbots inteligentes, fluxos conversacionais e análise de dados."
+                    title: "Software Engineering",
+                    description: "Engenheira Full Stack (React, Node.js, Prisma, Docker, SQL) formando arquiteturas e interfaces escaláveis."
                 },
                 {
-                    title: "Lógica & Performance",
-                    description: "Base matemática aplicada para otimização de algoritmos e sistemas escaláveis."
+                    title: "Data Science & IA",
+                    description: "Especialista e MBA. Refinamento de bases de dados (Pandas, Regex), Chatbots e integrações focadas na experiência do usuário."
                 }
             ],
             experience: [
                 {
-                    year: "Jul 2025 — Atual",
-                    role: "Analista de Dados - Voluntária",
+                    year: "2025 — Atual",
+                    role: "Analista de Dados Jr. | Projeto Voluntário",
                     company: "Stoá",
-                    desc: "Atuação voluntária na Stoá, com foco na criação de um chatbot com Inteligência Artificial voltado ao atendimento de doadores. Responsável por: Análise de dados relacionados às interações no chat; Levantamento e categorização de perguntas frequentes; Estruturação de dados para análise de comportamento dos usuários; Apoio na criação de fluxos lógicos de resposta baseados em dados reais; Identificação de padrões e insights para otimizar o treinamento do chatbot."
+                    desc: "Criação de chatbot com IA para doadores. Utilização de Python (Pandas, Regex), análise textual e modelamento de respostas lógicas em IA para aprimoramento de interação digital e automação."
                 },
                 {
                     year: "Ago 2024 — Abr 2025",
-                    role: "Professora Ensino Médio",
+                    role: "Professora do Ensino Médio",
                     company: "Colégio Ápice Educacional",
-                    desc: "Atuei como professora de Matemática, Física e Filosofia no Ensino Médio. Minha missão é inspirar e capacitar os alunos a desenvolverem habilidades críticas e analíticas, integrando conceitos teóricos com aplicações práticas."
+                    desc: "Atuação como educadora de Matemática, Física e Filosofia. Responsável por alinhar lógica racional pura ao desenvolvimento do pensamento crítico analítico com centenas de alunos."
                 },
                 {
-                    year: "Abr 2023 — Jul 2024",
-                    role: "Desenvolvedora/Lider",
-                    company: "IESB - BayArea",
-                    desc: "No IESB, onde atuei como líder por três semestres, conduzi uma equipe dedicada ao desenvolvimento de uma plataforma de Ponto de Vendas voltada para beneficiar a comunidade. Essa iniciativa teve como objetivo principal atender às necessidades locais e promover o bem-estar coletivo. Contribuí ativamente tanto no frontend quanto no backend, implementando melhorias e desenvolvendo códigos que garantiram maior eficiência e qualidade ao sistema."
+                    year: "2023 — 2024",
+                    role: "Desenvolvedora e Líder Técnica",
+                    company: "IESB (Projeto Voluntário)",
+                    desc: "Liderança arquitetural (Frontend e Backend) no desenvolvimento de um PDV focado em impacto comunitário, utilizando JS, React, Node, Prisma, MySQL e Docker."
+                }
+            ],
+            education: [
+                {
+                    year: "Concluído",
+                    course: "MBA em Tecnologia para Negócios: AI, Data Science e Big Data",
+                    institution: "Líbano"
+                },
+                {
+                    year: "Concluído",
+                    course: "Pós-graduação em Ciência de Dados e Inteligência Artificial",
+                    institution: "Líbano"
+                },
+                {
+                    year: "Concluído",
+                    course: "Análise e Desenvolvimento de Sistemas",
+                    institution: "IESB"
+                },
+                {
+                    year: "Em andamento",
+                    course: "Licenciatura em Física",
+                    institution: "UniCesumar"
+                },
+                {
+                    year: "Julho / 2026",
+                    course: "Licenciatura em Matemática",
+                    institution: "UniCesumar"
                 }
             ]
         },
         projects: {
-            title_part1: "Projetos em",
-            title_part2: "Destaque",
-            description: "Soluções que unem desenvolvimento web moderno, inteligência artificial e impacto social.",
-            live_demo: "Ver Projeto",
-            github: "GitHub",
-            hover_view: "Ver Detalhes"
+            title_part1: "Registro de",
+            title_part2: "Sistemas",
+            description: "Exposições da minha engenharia, englobando integrações PWA, arquiteturas orientadas a eventos e modelagem.",
+            live_demo: "Visitar Site",
+            github: "Repositório",
+            hover_view: "Esmiuçar"
         },
         contact: {
-            badge: "Vamos Colaborar?",
-            title_part1: "Pronta para o seu",
-            title_part2: "próximo projeto.",
-            description: "Procurando uma desenvolvedora que entenda de lógica e entrega técnica? Estou aberta a projetos freelance e parcerias.",
+            badge: "Vamos Conversar?",
+            title_part1: "Conexões",
+            title_part2: "Profissionais",
+            description: "Disponível para novos desafios, arquitetura de soluções, análise de dados e palestras.",
             whatsapp_title: "WhatsApp",
-            whatsapp_desc: "Resposta rápida",
+            whatsapp_desc: "(61) 98466-0734",
             whatsapp_cta: "Chamar no Whats",
             email_title: "E-mail",
             email_desc: "b.kleuvyn@gmail.com",
             linkedin_title: "LinkedIn",
-            linkedin_desc: "Conecte-se comigo",
-            linkedin_cta: "Ver Perfil",
-            main_cta: "Solicitar Orçamento",
-            status_available: "Disponível para novos projetos",
-            status_global: "Remoto / Brasília"
+            linkedin_desc: "Beatryz Kleuvyn",
+            linkedin_cta: "Conectar",
+            main_cta: "Agendar Reunião",
+            status_available: "Aceitando Contratos Free-Lancer",
+            status_global: "Website Institucional: kleuvyn.tec.br"
         }
     },
     EN: {
         language: 'EN',
         nav: {
-            projects: "Projects",
-            about: "About",
+            projects: "Portfolio",
+            about: "Trajectory",
             contact: "Contact",
-            cta: "Talk to Me"
+            cta: "Resume"
         },
         hero: {
-            badge: "Available for freelance projects",
+            badge: "Logic, Data & Software Engineer",
             title_part1: "Beatryz",
-            title_part2: "Kleuvyn",
-            tagline: "Full Stack Developer",
-            description: "Developing complete web solutions where mathematical logic meets modern technology. Turning ideas into real and functional applications.",
-            cta_primary: "View Projects",
-            cta_secondary: "Let's Talk"
+            title_part2: "Kleuvyn.",
+            tagline: "Software Engineer & Data Analyst Jr.",
+            description: "Building robust end-to-end solutions grounded in the rigor of mathematics and physics. Specialist in data science, AI, and scalable web architecture.",
+            cta_primary: "View Work",
+            cta_secondary: "Professional Resume"
         },
         about: {
-            badge: "About Me",
-            title_part1: "Turning ideas into",
-            title_part2: "Real Applications.",
-            description: "I am a freelance Full Stack developer with a solid academic background (ADS, Post-grad in Data Science/AI, and MBA).",
-            trajectory_title: "Experience & Education",
-            trajectory_subtitle: "My journey merging technology, education, and technical leadership.",
+            badge: "Professional Profile",
+            title_part1: "Analytical Rigor &",
+            title_part2: "Software Engineering",
+            description: "Hold an MBA in Business Tech (AI/Data Science) and a post-grad in AI, marrying deep academic math background with high-impact software development. From teaching high school physics to tech leading commercial systems.",
+            trajectory_title: "Resume",
+            trajectory_subtitle: "My academic and professional journey.",
             skills: [
                 {
-                    title: "Full Stack Development",
-                    description: "React, Next.js, TypeScript and Node.js. Complete applications from frontend to backend."
+                    title: "Mathematics & Physics",
+                    description: "Undergraduate. Advanced capabilities in logical modeling, abstraction of complex systems, and algorithm optimization."
                 },
                 {
-                    title: "AI Engineering",
-                    description: "Implementation of intelligent chatbots, conversational flows and data analysis."
+                    title: "Software Engineering",
+                    description: "Full Stack Engineer (React, Node.js, Prisma, Docker, SQL) crafting scalable architectures and interfaces."
                 },
                 {
-                    title: "Logic & Performance",
-                    description: "Mathematical foundation applied to algorithm optimization and scalable systems."
+                    title: "Data Science & AI",
+                    description: "Specialist & MBA. Database refinement (Pandas, Regex), Chatbots, and user-experience focused integrations."
                 }
             ],
             experience: [
                 {
-                    year: "Jul 2025 — Present",
-                    role: "Data Analyst - Volunteer",
+                    year: "2025 — Present",
+                    role: "Jr. Data Analyst | Volunteer",
                     company: "Stoá",
-                    desc: "Voluntary work at Stoá, focusing on creating an AI chatbot for donor service. Responsible for: Data analysis of chat interactions; FAQ identification and categorization; Data structuring for user behavior analysis; Supporting the creation of logical response flows based on real data; Pattern and insight identification to optimize chatbot training."
+                    desc: "Chatbot AI creation for donors. Applied Python (Pandas, Regex), textual analysis, and AI logical modeling to enhance digital interaction and automation."
                 },
                 {
                     year: "Aug 2024 — Apr 2025",
                     role: "High School Teacher",
                     company: "Ápice College",
-                    desc: "Taught Mathematics, Physics, and Philosophy. My mission was to inspire and empower students to develop critical and analytical skills, integrating theory with practical applications."
+                    desc: "Educator in Math, Physics, and Philosophy. Responsible for aligning pure rational logic with the development of critical thinking for hundreds of students."
                 },
                 {
-                    year: "Apr 2023 — Jul 2024",
-                    role: "Developer/Lead",
-                    company: "IESB - BayArea",
-                    desc: "At IESB, as a lead for three semesters, I headed a team developing a POS platform for the community. Contributed actively to both frontend and backend, implementing improvements and code that ensured greater efficiency and quality."
+                    year: "2023 — 2024",
+                    role: "Full Stack Dev & Tech Lead",
+                    company: "IESB (Volunteer)",
+                    desc: "Architectural leadership (Frontend & Backend) for a community-impact POS application. Tech stack: JS, React, Node, Prisma, MySQL, and Docker."
+                }
+            ],
+            education: [
+                {
+                    year: "Completed",
+                    course: "MBA in Business Technology: AI, Data Science & Big Data",
+                    institution: "Lebanon"
+                },
+                {
+                    year: "Completed",
+                    course: "Post-Graduate in Data Science & Artificial Intelligence",
+                    institution: "Lebanon"
+                },
+                {
+                    year: "Completed",
+                    course: "Systems Analysis and Development",
+                    institution: "IESB"
+                },
+                {
+                    year: "Ongoing",
+                    course: "BSc in Physics",
+                    institution: "UniCesumar"
+                },
+                {
+                    year: "July / 2026",
+                    course: "BSc in Mathematics",
+                    institution: "UniCesumar"
                 }
             ]
         },
         projects: {
-            title_part1: "Featured",
-            title_part2: "Projects",
-            description: "Technical exploration through software development, where mathematical rigor meets AI.",
-            live_demo: "View Project",
-            github: "GitHub",
-            hover_view: "Details"
+            title_part1: "System",
+            title_part2: "Logs",
+            description: "Exhibitions of my engineering, covering PWA integrations, event-driven architectures, and modeling.",
+            live_demo: "Live Demo",
+            github: "Repo",
+            hover_view: "Inspect"
         },
         contact: {
-            badge: "Let's Collaborate?",
-            title_part1: "Ready for your",
-            title_part2: "next project.",
-            description: "Looking for a developer who understands logic and technical delivery? I am open to freelance work and partnerships.",
+            badge: "Let's Chat?",
+            title_part1: "Professional",
+            title_part2: "Connections",
+            description: "Available for new challenges, architecture solutions, data analysis, and talks.",
             whatsapp_title: "WhatsApp",
-            whatsapp_desc: "Fast response",
-            whatsapp_cta: "Call on Whats",
+            whatsapp_desc: "+55 (61) 98466-0734",
+            whatsapp_cta: "Send a Message",
             email_title: "Email",
             email_desc: "b.kleuvyn@gmail.com",
             linkedin_title: "LinkedIn",
-            linkedin_desc: "Connect with me",
-            linkedin_cta: "View Profile",
-            main_cta: "Request a Quote",
-            status_available: "Available for new projects",
-            status_global: "Remote / Brasília"
+            linkedin_desc: "Beatryz Kleuvyn",
+            linkedin_cta: "Connect",
+            main_cta: "Schedule Meeting",
+            status_available: "Accepting Freelance Contracts",
+            status_global: "Official Website: kleuvyn.tec.br"
         }
     }
 };
@@ -218,12 +272,12 @@ function Providers({ children, ...props }) {
             children: children
         }, void 0, false, {
             fileName: "[project]/components/providers.tsx",
-            lineNumber: 180,
+            lineNumber: 234,
             columnNumber: 7
         }, this)
     }, void 0, false, {
         fileName: "[project]/components/providers.tsx",
-        lineNumber: 179,
+        lineNumber: 233,
         columnNumber: 5
     }, this);
 }

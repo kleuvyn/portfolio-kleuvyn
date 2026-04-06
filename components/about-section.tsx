@@ -1,123 +1,112 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { Code2, Brain, CheckCircle2, Cpu, Globe } from "lucide-react"
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { Badge } from "@/components/ui/badge"
 import { useLanguage } from "@/components/providers"
+import { Flower2, Quote, Sigma } from "lucide-react"
 
 export function AboutSection() {
   const { t } = useLanguage()
-  const skillIcons = [Cpu, Brain, Code2]
-
-  const skills = t.about.skills ? t.about.skills.map((skill, index) => ({
-    ...skill,
-    icon: skillIcons[index] || Code2
-  })) : []
-
-  const experiences = t.about.experience || []
 
   return (
-    <section id="sobre" className="container mx-auto px-6 py-24 lg:py-32 bg-background">
-      <div className="max-w-6xl mx-auto">
+    <section id="sobre" className="py-32 bg-card relative overflow-hidden">
+      {/* Texture Background */}
+      <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cream-paper.png')] opacity-80" />
+
+      {/* Decorative large letters / math symbols */}
+      <div className="absolute -left-10 md:left-10 top-20 text-[20rem] font-serif italic text-primary/[0.03] select-none -translate-y-1/2">
+        &int;
+      </div>
+      <div className="absolute right-0 bottom-0 text-[15rem] font-serif text-secondary/[0.05] select-none rotate-12">
+        <Sigma className="w-full h-full" />
+      </div>
+
+      <div className="container mx-auto px-6 max-w-5xl relative z-10">
         
-        <motion.div 
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="flex flex-col items-center text-center mb-24 space-y-6"
-        >
-          <Badge className="bg-primary/10 text-primary border-none hover:bg-primary/20 transition-colors px-4 py-1.5 text-[10px] tracking-[0.2em] uppercase font-bold">
-            {t.about.badge}
-          </Badge>
+        <div className="flex flex-col md:flex-row gap-16 items-start">
           
-          <h2 className="text-5xl lg:text-7xl font-bold tracking-tighter text-foreground leading-[1.1]">
-            {t.about.title_part1} <br />
-            <span className="text-primary italic font-serif">{t.about.title_part2}</span>
-          </h2>
+          {/* Left Column - Quote / Sticky Note */}
+          <motion.div 
+            initial={{ opacity: 0, rotate: -3 }}
+            whileInView={{ opacity: 1, rotate: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+            className="w-full md:w-1/3 order-2 md:order-1"
+          >
+            <div className="bg-background p-8 border border-border/50 shadow-md relative mt-10 md:mt-24">
+              <Quote className="h-8 w-8 text-primary/40 absolute -top-4 -left-4 bg-background rounded-full p-1" />
+              <p className="font-serif italic text-xl leading-relaxed text-foreground/80 mb-6">
+                 {t.language === 'PT' 
+                   ? "A matemática é o alfabeto com o qual Deus escreveu o universo. E o código é como nós o reescrevemos diariamente."
+                   : "Mathematics is the alphabet with which God has written the universe. And code is how we rewrite it daily."}
+              </p>
+              <div className="flex items-center gap-2 pt-4 border-t border-border/50 text-xs font-sans uppercase tracking-[0.2em] text-primary">
+                <Flower2 className="h-4 w-4" />
+                <span>Kleuvyn B.</span>
+              </div>
+            </div>
+          </motion.div>
 
-          <p className="text-lg lg:text-xl text-muted-foreground leading-relaxed max-w-3xl font-light">
-            {t.about.description}
-          </p>
-        </motion.div>
-
-        <div className="grid md:grid-cols-3 gap-8 mb-32">
-          {skills.map((skill, index) => (
+          {/* Right Column - Biographic Text */}
+          <div className="w-full md:w-2/3 order-1 md:order-2">
             <motion.div
-              key={`skill-${index}`}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
+              transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
-              <Card className="group relative border-2 border-muted bg-card/40 backdrop-blur-xl hover:border-primary/40 transition-all duration-500 overflow-hidden h-full">
-                <CardHeader className="relative z-10">
-                  <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-4 group-hover:scale-110 group-hover:bg-primary/20 transition-all duration-500">
-                    <skill.icon className="h-6 w-6 text-primary" />
-                  </div>
-                  <CardTitle className="text-xl font-bold tracking-tight">{skill.title}</CardTitle>
-                </CardHeader>
-                <CardContent className="relative z-10">
-                  <p className="text-sm leading-relaxed text-muted-foreground group-hover:text-foreground transition-colors">
-                    {skill.description}
-                  </p>
-                </CardContent>
-                <div className="absolute -right-4 -bottom-4 w-24 h-24 bg-primary/5 rounded-full blur-3xl group-hover:bg-primary/15 transition-all" />
-              </Card>
-            </motion.div>
-          ))}
-        </div>
+              <div className="flex items-center gap-4 mb-4">
+                <div className="h-[1px] w-12 bg-primary" />
+                <span className="text-xs font-bold uppercase tracking-[0.3em] text-primary">
+                  {t.about.badge}
+                </span>
+              </div>
+              
+              <h2 className="text-4xl md:text-5xl font-bold tracking-tighter text-foreground mb-10">
+                <span className="font-serif italic text-primary block mb-2">{t.about.title_part1}</span>
+                {t.about.title_part2}
+              </h2>
 
-        <div className="space-y-12">
-          <motion.div 
-            initial={{ opacity: 0, x: -20 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            className="flex flex-col md:flex-row md:items-end justify-between gap-4 border-b border-muted pb-8"
-          >
-            <div>
-              <h3 className="text-3xl lg:text-4xl font-bold tracking-tight text-foreground">
-                {t.about.trajectory_title}
-              </h3>
-              <p className="text-muted-foreground mt-2 font-light italic">
-                {t.about.trajectory_subtitle}
-              </p>
-            </div>
-            <Globe className="h-8 w-8 text-muted/30 hidden md:block animate-pulse" />
-          </motion.div>
-          
-          <div className="grid gap-6">
-            {experiences.map((exp, index) => (
-              <motion.div
-                key={`exp-${index}`}
-                initial={{ opacity: 0, x: 20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="group relative grid md:grid-cols-[1fr_2fr] gap-4 md:gap-12 p-8 rounded-2xl border-2 border-transparent hover:border-muted hover:bg-muted/10 transition-all duration-300"
-              >
-                <div className="space-y-1">
-                  <span className="text-sm font-mono text-primary/60 font-medium tracking-tighter uppercase">
-                    {exp.year}
-                  </span>
-                  <h4 className="text-2xl font-bold text-foreground group-hover:text-primary transition-colors">
-                    {exp.role}
-                  </h4>
-                  <p className="text-primary font-semibold flex items-center gap-2">
-                    {exp.company}
-                  </p>
+              {/* Big First Letter Drop Cap */}
+              <div className="prose prose-lg dark:prose-invert text-muted-foreground font-sans">
+                <p className="leading-loose relative z-10 first-letter:float-left first-letter:text-6xl first-letter:pr-4 first-letter:font-serif first-letter:text-primary first-letter:font-bold first-letter:italic">
+                  <span className="font-bold text-foreground">{t.language === 'PT' ? 'Engenheira de Software e Analista de Dados.' : 'Software Engineer and Data Analyst.'}</span> {
+                  t.language === 'PT' 
+                    ? "Com uma formação sólida nas ciências exatas — transitando pela Matemática, Física e especializações em Inteligência Artificial — encontrei na engenharia de software o ecossistema ideal para aplicar a lógica estruturada na resolução de problemas complexos. Atuo desenvolvendo aplicações de ponta a ponta, desde a arquitetura de dados e IA até a entrega de interfaces escaláveis."
+                    : "With a solid background in exact sciences — spanning Mathematics, Physics, and AI specializations — I found in software engineering the ideal ecosystem to apply structured logic to solve complex problems. I develop end-to-end applications, from data architecture and AI to delivering scalable interfaces."
+                  }
+                </p>
+                <br />
+                <p className="leading-loose">
+                  {t.language === 'PT' 
+                    ? "Minha abordagem técnica é fundamentada no rigor acadêmico e na excelência analítica. A mesma precisão exigida no estudo corporativo de dados e na modelagem física é o que aplico diariamente para construir códigos limpos, seguros e orientados a resultados reais para o mercado de tecnologia."
+                    : "My technical approach is grounded in academic rigor and analytical excellence. The same precision required in corporate data studies and physical modeling is what I apply daily to build clean, secure code driven by real-world results in the tech industry."
+                  }
+                </p>
+              </div>
+
+              {/* Aesthetic skills list */}
+              <div className="mt-16">
+                <h3 className="text-sm uppercase tracking-[0.3em] text-primary font-bold mb-3">{t.about.resume_title}</h3>
+                <p className="text-sm text-muted-foreground mb-8">{t.about.resume_description}</p>
+                <div className="grid grid-cols-2 md:grid-cols-3 gap-6 border-t border-border/40 pt-10">
+                  {[
+                    { label: "Frontend", tools: "React, Next.js, Tailwind" },
+                    { label: "Backend", tools: "Node, Python, Postgres" },
+                    { label: "Design", tools: "Figma, UI/UX" },
+                    { label: "Dados", tools: "Análise, Python, SQL" },
+                    { label: "Lógica", tools: "Matemática, Física" },
+                    { label: "Vida", tools: "Jazz, Livros, Café" },
+                  ].map((skill) => (
+                    <div key={skill.label} className="group">
+                      <h4 className="font-serif italic text-primary mb-1 border-l-2 border-transparent group-hover:border-primary pl-2 transition-all">{skill.label}</h4>
+                      <p className="text-xs uppercase tracking-widest text-muted-foreground pl-2">{skill.tools}</p>
+                    </div>
+                  ))}
                 </div>
-                
-                <div className="flex flex-col justify-center">
-                  <p className="text-muted-foreground leading-relaxed text-base">
-                    {exp.desc}
-                  </p>
-                </div>
-                
-                <CheckCircle2 className="absolute top-8 right-8 h-5 w-5 text-muted opacity-0 group-hover:opacity-100 group-hover:text-primary transition-all duration-500" />
-              </motion.div>
-            ))}
+              </div>
+            </motion.div>
           </div>
+
         </div>
       </div>
     </section>

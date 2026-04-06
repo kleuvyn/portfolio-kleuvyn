@@ -1,123 +1,136 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { Github, Linkedin, Mail, ArrowDown, Sparkles } from "lucide-react"
-import { Button } from "@/components/ui/button"
+import { Github, Linkedin, Mail, BookOpen, Coffee, Sparkles } from "lucide-react"
 import { useLanguage } from "@/components/providers"
 
 export function HeroSection() {
   const { t } = useLanguage()
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-background">
-      <div className="absolute inset-0 -z-10">
-        <div className="absolute top-[10%] left-[15%] w-160 h-160 bg-primary/10 rounded-full blur-[120px] animate-pulse" />
-        <div className="absolute bottom-[10%] right-[15%] w-140 h-140 bg-primary/5 rounded-full blur-[100px] animate-pulse delay-700" />
-      </div>
+    <section className="relative min-h-screen pt-32 pb-20 overflow-hidden flex items-center">
+      {/* Background Vintage Texture */}
+      <div className="absolute inset-0 -z-10 bg-[url('https://www.transparenttextures.com/patterns/cream-paper.png')] opacity-60" />
+      <div className="absolute inset-0 -z-10 bg-linear-to-b from-background via-background/90 to-background" />
 
-      <div className="container mx-auto px-6 pt-32 pb-16 lg:pt-48">
-        <div className="max-w-6xl mx-auto text-center">
+      {/* Decorative Blob */}
+      <div className="absolute top-1/4 right-0 md:right-1/4 w-[40vw] h-[40vw] bg-primary/10 rounded-full blur-[100px] -z-10" />
+
+      <div className="container mx-auto px-6">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           
-          <motion.div 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-            className="inline-flex items-center gap-3 px-4 py-2 rounded-full bg-primary/5 text-primary text-xs font-bold mb-10 border border-primary/20 backdrop-blur-sm tracking-[0.2em] uppercase"
-          >
-            <span className="relative flex h-2 w-2">
-              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
-              <span className="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
-            </span>
-            {t.hero.badge}
-          </motion.div>
-
-          <motion.h1 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-6xl md:text-8xl lg:text-9xl font-bold mb-8 tracking-tighter text-foreground"
-          >
-            {t.hero.title_part1} <span className="text-primary italic font-serif">{t.hero.title_part2}</span>
-          </motion.h1>
-
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.4 }}
-            className="space-y-4 mb-12"
-          >
-            <p className="text-2xl md:text-4xl lg:text-5xl font-light tracking-tight text-foreground/90">
-              {t.hero.tagline}
-            </p>
-            <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto font-light leading-relaxed">
-              {t.hero.description}
-            </p>
-          </motion.div>
-
-          <motion.div 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.6 }}
-            className="flex flex-col sm:flex-row items-center justify-center gap-5 mb-20"
-          >
-            <Button size="lg" className="w-full sm:w-auto gap-3 h-16 px-10 text-lg rounded-full shadow-2xl shadow-primary/20 hover:scale-105 transition-all duration-300 group" asChild>
-              <a href="#projetos">
-                {t.hero.cta_primary}
-                <Sparkles className="h-5 w-5 group-hover:rotate-12 transition-transform" />
-              </a>
-            </Button>
-            <Button
-              size="lg"
-              variant="outline"
-              className="w-full sm:w-auto gap-2 h-16 px-10 text-lg rounded-full border-2 hover:bg-primary/5 transition-all duration-300"
-              asChild
+          {/* Left Column: Huge Editorial Typography */}
+          <div className="lg:col-span-7 relative z-10">
+            <motion.div
+              initial={{ opacity: 0, x: -20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8, ease: "easeOut" }}
+              className="flex items-center gap-4 mb-8"
             >
-              <a href="#contato">{t.hero.cta_secondary}</a>
-            </Button>
-          </motion.div>
+              <div className="h-[2px] w-12 bg-primary" />
+              <span className="text-xs md:text-sm font-bold uppercase tracking-[0.3em] text-primary">
+                {t.hero.badge}
+              </span>
+            </motion.div>
 
+            <motion.h1 
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
+              className="text-7xl md:text-9xl font-bold leading-[0.85] tracking-tighter text-foreground mb-8"
+            >
+              <span className="block">{t.hero.title_part1}</span>
+              <span className="block font-serif italic text-primary ml-8 md:ml-16">
+                {t.hero.title_part2}.
+              </span>
+            </motion.h1>
+
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.8, delay: 0.4 }}
+              className="pl-8 md:pl-16 border-l border-primary/30 py-2"
+            >
+              <p className="text-xl md:text-2xl font-serif text-foreground/80 mb-4 max-w-lg">
+                "{t.hero.tagline}"
+              </p>
+              <p className="text-sm md:text-base text-muted-foreground font-sans leading-loose max-w-lg">
+                {t.hero.description}
+              </p>
+            </motion.div>
+
+            {/* Custom Editorial Links */}
+            <motion.div 
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.6 }}
+              className="flex flex-wrap items-center gap-8 mt-12 pl-8 md:pl-16"
+            >
+              <a href="#projetos" className="group flex items-center gap-3 text-sm font-bold uppercase tracking-widest text-foreground hover:text-primary transition-colors">
+                <span className="border-b-2 border-primary pb-1">{t.hero.cta_primary}</span>
+                <BookOpen className="h-4 w-4 group-hover:-rotate-12 transition-transform" />
+              </a>
+              
+              <a href="#sobre" className="group flex items-center gap-3 text-sm font-bold uppercase tracking-widest text-muted-foreground hover:text-foreground transition-colors relative">
+                <span className="border-b border-transparent group-hover:border-foreground pb-1 transition-all">{t.hero.cta_secondary}</span>
+                <Coffee className="h-4 w-4 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all" />
+              </a>
+            </motion.div>
+          </div>
+
+          {/* Right Column: Scrapbook Element */}
           <motion.div 
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 1, delay: 0.8 }}
-            className="flex flex-col items-center gap-12"
+            initial={{ opacity: 0, scale: 0.9, rotate: -5 }}
+            animate={{ opacity: 1, scale: 1, rotate: 3 }}
+            transition={{ duration: 1, delay: 0.5, type: "spring" }}
+            className="lg:col-span-5 relative hidden md:block"
           >
-            <div className="flex justify-center gap-8">
-              {[
-                { icon: Github, url: "https://github.com/kleuvyn", label: "GitHub" },
-                { icon: Linkedin, url: "https://www.linkedin.com/in/beatryz-kleuvyn-467a23198/", label: "LinkedIn" },
-                { icon: Mail, url: "mailto:b.kleuvyn@gmail.com", label: "Email" }
-              ].map((item) => (
-                <a
-                  key={item.label}
-                  href={item.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="group relative flex flex-col items-center gap-2"
-                >
-                  <div className="w-14 h-14 rounded-2xl border border-border/50 bg-card/30 flex items-center justify-center text-muted-foreground group-hover:text-primary group-hover:border-primary/50 transition-all duration-500 backdrop-blur-sm">
-                    <item.icon className="h-6 w-6" />
-                  </div>
-                  <span className="text-[10px] uppercase tracking-widest font-bold opacity-0 group-hover:opacity-100 transition-opacity text-primary">
-                    {item.label}
-                  </span>
-                </a>
-              ))}
+            {/* Polaroid / Paper Card */}
+            <div className="relative bg-[#FAFAF5] p-6 shadow-2xl border border-muted/50 w-full max-w-[400px] mx-auto z-10 rotate-3 hover:rotate-0 transition-all duration-500">
+              {/* Tape effect */}
+              <div className="absolute -top-3 left-1/2 -translate-x-1/2 w-24 h-8 bg-white/40 shadow-sm backdrop-blur-md rotate-[-2deg]" style={{ mixBlendMode: 'multiply' }} />
+              
+              <div className="aspect-[4/5] bg-muted w-full relative overflow-hidden mb-4 border border-border">
+                {/* Sua Foto Oficial */}
+                <div className="absolute inset-0 bg-primary/10 mix-blend-multiply z-10" />
+                <div className="absolute inset-0 bg-[url('/eu.jpeg')] bg-cover bg-center grayscale-[15%] contrast-110" />
+              </div>
+              <div className="text-center font-serif text-lg italic text-foreground/80 flex items-center justify-center gap-2">
+                — {t.language === 'PT' ? 'Lógica & Arquitetura.' : 'Logic & Architecture.'} <Sparkles className="inline h-4 w-4 text-primary" />
+              </div>
             </div>
 
-            <motion.a
-              href="#sobre"
-              animate={{ y: [0, 10, 0] }}
-              transition={{ repeat: Infinity, duration: 2 }}
-              className="flex flex-col items-center gap-3 text-muted-foreground/50 hover:text-primary transition-colors group"
-            >
-              <span className="text-[10px] uppercase tracking-[0.3em] font-bold">
-                {t.language === 'PT' ? 'Explorar Trajetória' : 'Explore Journey'}
+            {/* Floating elements behind */}
+            <div className="absolute -bottom-10 -left-10 w-48 h-64 bg-secondary/80 border border-secondary p-4 -rotate-6 -z-10 shadow-xl flex items-end">
+              <span className="font-sans text-xs tracking-widest text-[#FAFAF5] uppercase opacity-70">
+                Data & Logic
               </span>
-              <ArrowDown className="h-5 w-5" />
-            </motion.a>
+            </div>
+            <div className="absolute top-10 -right-5 w-32 h-32 rounded-full border border-primary/40 -z-10 flex items-center justify-center -rotate-12">
+              <span className="font-serif italic text-primary/40 text-sm w-20 text-center">Software Engineering</span>
+            </div>
           </motion.div>
+
         </div>
+
+        {/* Social Links - Vertical floating or bottom align */}
+        <motion.div 
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 1, delay: 1 }}
+          className="absolute bottom-10 left-6 md:left-12 flex flex-col gap-6 z-20"
+        >
+          <div className="h-20 w-px bg-foreground/20 mx-auto" />
+          <a href="https://github.com/kleuvyn" target="_blank" rel="noopener noreferrer" className="text-foreground/50 hover:text-primary transition-colors hover:-translate-y-1 transform duration-300">
+            <Github className="h-5 w-5" />
+          </a>
+          <a href="https://www.linkedin.com/in/beatryz-kleuvyn-467a23198/" target="_blank" rel="noopener noreferrer" className="text-foreground/50 hover:text-primary transition-colors hover:-translate-y-1 transform duration-300">
+            <Linkedin className="h-5 w-5" />
+          </a>
+          <a href="mailto:b.kleuvyn@gmail.com" className="text-foreground/50 hover:text-primary transition-colors hover:-translate-y-1 transform duration-300">
+            <Mail className="h-5 w-5" />
+          </a>
+        </motion.div>
       </div>
     </section>
   )
