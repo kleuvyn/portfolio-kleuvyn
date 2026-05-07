@@ -42,7 +42,7 @@ export function ContactSection() {
               </span>
             </div>
 
-            <h2 className="text-6xl md:text-8xl font-bold tracking-tighter mb-8 leading-[0.9]">
+            <h2 className="text-4xl md:text-6xl lg:text-8xl font-bold tracking-tighter mb-8 leading-[0.9]">
               <span className="font-serif italic text-primary/90 font-light mr-4">{t.contact.title_part1}</span>
               <br className="md:hidden" />
               <span className="text-background">{t.contact.title_part2}.</span>

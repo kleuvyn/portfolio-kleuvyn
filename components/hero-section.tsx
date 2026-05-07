@@ -14,7 +14,7 @@ export function HeroSection() {
       <div className="absolute inset-0 -z-10 bg-linear-to-b from-background via-background/90 to-background" />
 
       {/* Decorative Blob */}
-      <div className="absolute top-1/4 right-0 md:right-1/4 w-[40vw] h-[40vw] bg-primary/10 rounded-full blur-[100px] -z-10" />
+      <div className="absolute top-1/4 right-0 w-[80vw] h-[80vw] sm:w-[60vw] sm:h-[60vw] md:right-1/4 md:w-[40vw] md:h-[40vw] bg-primary/10 rounded-full blur-[100px] -z-10" />
 
       <div className="container mx-auto px-6">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
@@ -37,7 +37,7 @@ export function HeroSection() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
-              className="text-7xl md:text-9xl font-bold leading-[0.85] tracking-tighter text-foreground mb-8"
+              className="text-5xl sm:text-6xl md:text-7xl lg:text-9xl font-bold leading-[0.85] tracking-tighter text-foreground mb-8"
             >
               <span className="block">{t.hero.title_part1}</span>
               <span className="block font-serif italic text-primary ml-8 md:ml-16">

@@ -13,6 +13,10 @@ import { FloatingNav } from "@/components/floating-nav";
 export const metadata: Metadata = {
   title: "Beatryz Kleuvyn | Tech Lead & Arquiteta de Dados",
   description: "Portfólio de engenharia de software de Beatryz Kleuvyn. Especialista em TypeScript, Python e Arquitetura de Dados. Background em Matemática e Física.",
+  viewport: {
+    width: 'device-width',
+    initialScale: 1,
+  },
   openGraph: {
     title: "Beatryz Kleuvyn | Tech Lead & Arquiteta",
     description: "Lógica & Arquitetura. Soluções escaláveis e design editorial vintage.",
