@@ -27,7 +27,7 @@ export const metadata: Metadata = {
         url: "/eu.jpeg",
         width: 800,
         height: 800,
-        alt: "Beatryz Kleuvyn",
+        alt: "Beatryz Kleuvyn", 
       },
     ],
     locale: "pt_BR",
