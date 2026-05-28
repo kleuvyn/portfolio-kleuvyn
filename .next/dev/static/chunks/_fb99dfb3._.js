@@ -2084,6 +2084,22 @@ function ProjectsGrid() {
             impact: "Fortificou laços entre leitores apaixonados e democratizou discussões enriquecedoras, gerando um polo autônomo constante de troca de literatura."
         },
         {
+            title: "Bibliopatas - Biblioteca Animal",
+            description: "Livros que salvam vidas. Cada pagina lida financia abrigos e protetores independentes que cuidam de animais de rua. Projeto em Brasilia - DF com envio para todo o Brasil (frete a parte) e acervo online para compra.",
+            image: "/bibliopatas.png",
+            tags: [
+                "Next.js",
+                "Catalogo de Livros",
+                "Impacto Social"
+            ],
+            githubUrl: "#",
+            liveUrl: "https://bibliopatas.vercel.app",
+            role: "Projeto Social",
+            challenge: "Criar um site simples e confiavel para exibicao do acervo de livros, conectando leitores a compras que apoiam a causa animal sem friccao.",
+            architecture: "Experiencia web focada em descoberta de acervo com busca e filtros, estrutura orientada a performance e leitura confortavel em desktop e mobile.",
+            impact: "Amplia a visibilidade do projeto em Brasilia - DF e em todo o Brasil, transformando interesse por livros em apoio direto a abrigos e protetores independentes."
+        },
+        {
             title: "Cebrapol",
             description: "Somos uma comunidade comprometida com o desenvolvimento humano, produzindo e disseminando conhecimento a partir de uma perspectiva global do Complexo Estado-Sociedade, fomentando a consolidação democrática e a participação na vida política.",
             image: "/cebrapol.png",
@@ -2177,8 +2193,8 @@ function ProjectsGrid() {
                 "Data Science",
                 "NLP"
             ],
-            githubUrl: "https://github.com/kleuvyn/Ritmos-do-Coracao",
-            liveUrl: "#",
+            githubUrl: "https://github.com/stoa-ritmos/backend",
+            liveUrl: "https://ritmos-stoa.techxops.com.br/chat/",
             role: "Data & AI Specialist",
             challenge: "Criar um canal digital humano e eficiente para a ONG, destinado primordialmente a arrecadar fundos e ajudar estrategicamente a atrair visibilidade.",
             architecture: "Engenharia de conversação para impacto social. Estruturação de fluxos orientados a dados e análise estatística textual para otimizar o suporte humanizado a doadores.",

@@ -5,3 +5,25 @@
 Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
 [00:00:20.059] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
 [00:00:49.108] Server  LOG      ✓ Compiled in 233ms
+[00:00:02.002] Server  LOG      ✓ Ready in 1357ms
+[00:00:06.747] Server  LOG      ○ Compiling / ...
+[00:00:08.761] Server  WARN     ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:3000". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
+[00:00:08.765] Server  WARN     ⚠ Unsupported metadata viewport is configured in metadata export in /. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[00:00:09.603] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:02:00.636] Server  LOG      ✓ Compiled in 251ms
+[00:02:05.559] Server  WARN     ⚠ Unsupported metadata viewport is configured in metadata export in /_not-found. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[00:02:16.837] Server  LOG      ✓ Compiled in 95ms
+[00:02:22.517] Server  LOG      ✓ Compiled in 112ms
+[00:02:47.106] Browser WARN    Warning: Missing `Description` or `aria-describedby={undefined}` for {DialogContent}.
+[00:02:47.106] Browser WARN    Warning: Missing `Description` or `aria-describedby={undefined}` for {DialogContent}.
+[00:01:32.448] Server  LOG      ✓ Compiled in 332ms
+[00:02:21.476] Server  LOG      ✓ Compiled in 215ms
+[00:01:32.448] Server  LOG      ✓ Compiled in 332ms
+[00:02:21.476] Server  LOG      ✓ Compiled in 215ms
+[00:05:09.399] Server  LOG      ✓ Compiled in 93ms
+[00:05:22.708] Server  LOG      ✓ Compiled in 95ms
+[00:06:05.106] Server  LOG      ✓ Compiled in 95ms
+[00:06:53.485] Server  LOG      ✓ Compiled in 91ms
+[00:07:27.961] Server  LOG      ✓ Compiled in 104ms
