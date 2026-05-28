@@ -1975,6 +1975,22 @@ function ProjectsGrid() {
             impact: "Fortificou laços entre leitores apaixonados e democratizou discussões enriquecedoras, gerando um polo autônomo constante de troca de literatura."
         },
         {
+            title: "Bibliopatas - Biblioteca Animal",
+            description: "Livros que salvam vidas. Cada pagina lida financia abrigos e protetores independentes que cuidam de animais de rua. Projeto em Brasilia - DF com envio para todo o Brasil (frete a parte) e acervo online para compra.",
+            image: "/bibliopatas.png",
+            tags: [
+                "Next.js",
+                "Catalogo de Livros",
+                "Impacto Social"
+            ],
+            githubUrl: "#",
+            liveUrl: "https://bibliopatas.vercel.app",
+            role: "Projeto Social",
+            challenge: "Criar um site simples e confiavel para exibicao do acervo de livros, conectando leitores a compras que apoiam a causa animal sem friccao.",
+            architecture: "Experiencia web focada em descoberta de acervo com busca e filtros, estrutura orientada a performance e leitura confortavel em desktop e mobile.",
+            impact: "Amplia a visibilidade do projeto em Brasilia - DF e em todo o Brasil, transformando interesse por livros em apoio direto a abrigos e protetores independentes."
+        },
+        {
             title: "Cebrapol",
             description: "Somos uma comunidade comprometida com o desenvolvimento humano, produzindo e disseminando conhecimento a partir de uma perspectiva global do Complexo Estado-Sociedade, fomentando a consolidação democrática e a participação na vida política.",
             image: "/cebrapol.png",
@@ -2068,8 +2084,8 @@ function ProjectsGrid() {
                 "Data Science",
                 "NLP"
             ],
-            githubUrl: "https://github.com/kleuvyn/Ritmos-do-Coracao",
-            liveUrl: "#",
+            githubUrl: "https://github.com/stoa-ritmos/backend",
+            liveUrl: "https://ritmos-stoa.techxops.com.br/chat/",
             role: "Data & AI Specialist",
             challenge: "Criar um canal digital humano e eficiente para a ONG, destinado primordialmente a arrecadar fundos e ajudar estrategicamente a atrair visibilidade.",
             architecture: "Engenharia de conversação para impacto social. Estruturação de fluxos orientados a dados e análise estatística textual para otimizar o suporte humanizado a doadores.",
@@ -2183,7 +2199,7 @@ function ProjectsGrid() {
                 className: "absolute top-0 right-0 w-64 h-64 bg-[url('https://www.transparenttextures.com/patterns/old-paper.png')] opacity-40 mix-blend-multiply rounded-bl-full"
             }, void 0, false, {
                 fileName: "[project]/components/projects-grid.tsx",
-                lineNumber: 172,
+                lineNumber: 184,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$0$2e$10_react$2d$dom$40$19$2e$2$2e$0_react$40$19$2e$2$2e$0_$5f$react$40$19$2e$2$2e$0$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2213,7 +2229,7 @@ function ProjectsGrid() {
                                         children: t.language === 'PT' ? 'Capítulo 02 — Case Studies' : 'Chapter 02 — Selected Works'
                                     }, void 0, false, {
                                         fileName: "[project]/components/projects-grid.tsx",
-                                        lineNumber: 183,
+                                        lineNumber: 195,
                                         columnNumber: 14
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$0$2e$10_react$2d$dom$40$19$2e$2$2e$0_react$40$19$2e$2$2e$0_$5f$react$40$19$2e$2$2e$0$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -2221,13 +2237,13 @@ function ProjectsGrid() {
                                         children: t.language === 'PT' ? 'Lógica & Arquitetura.' : 'Logic & Architecture.'
                                     }, void 0, false, {
                                         fileName: "[project]/components/projects-grid.tsx",
-                                        lineNumber: 186,
+                                        lineNumber: 198,
                                         columnNumber: 14
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/components/projects-grid.tsx",
-                                lineNumber: 182,
+                                lineNumber: 194,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$0$2e$10_react$2d$dom$40$19$2e$2$2e$0_react$40$19$2e$2$2e$0_$5f$react$40$19$2e$2$2e$0$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -2238,13 +2254,13 @@ function ProjectsGrid() {
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/components/projects-grid.tsx",
-                                lineNumber: 190,
+                                lineNumber: 202,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/components/projects-grid.tsx",
-                        lineNumber: 175,
+                        lineNumber: 187,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$0$2e$10_react$2d$dom$40$19$2e$2$2e$0_react$40$19$2e$2$2e$0_$5f$react$40$19$2e$2$2e$0$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2274,29 +2290,29 @@ function ProjectsGrid() {
                                     ...project
                                 }, void 0, false, {
                                     fileName: "[project]/components/projects-grid.tsx",
-                                    lineNumber: 214,
+                                    lineNumber: 226,
                                     columnNumber: 17
                                 }, this)
                             }, project.title, false, {
                                 fileName: "[project]/components/projects-grid.tsx",
-                                lineNumber: 198,
+                                lineNumber: 210,
                                 columnNumber: 14
                             }, this))
                     }, void 0, false, {
                         fileName: "[project]/components/projects-grid.tsx",
-                        lineNumber: 196,
+                        lineNumber: 208,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/components/projects-grid.tsx",
-                lineNumber: 174,
+                lineNumber: 186,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/components/projects-grid.tsx",
-        lineNumber: 170,
+        lineNumber: 182,
         columnNumber: 5
     }, this);
 }
