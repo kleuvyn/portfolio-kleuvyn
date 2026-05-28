@@ -2052,6 +2052,22 @@ function ProjectsGrid() {
     const { t } = (0, __TURBOPACK__imported__module__$5b$project$5d2f$components$2f$providers$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useLanguage"])();
     const projects = [
         {
+            title: "Bibliopatas",
+            description: "Projeto biblioteca animal com 165 livros encontrados e um acervo para descobrir livros disponíveis enquanto a leitura financia abrigos e protetores independentes.",
+            image: "/bibliopatas.png",
+            tags: [
+                "Next.js",
+                "Catálogo",
+                "Impacto Social"
+            ],
+            githubUrl: "#",
+            liveUrl: "https://bibliopatas.vercel.app/",
+            role: "Projeto em destaque",
+            challenge: "Criar uma vitrine acolhedora para um catálogo social que conecta livros, leitores e proteção animal sem perder clareza na navegação.",
+            architecture: "Interface editorial com foco no acervo, combinando apresentação minimalista, leitura rápida e destaque para os livros disponíveis.",
+            impact: "Cada página lida ajuda a ampliar o apoio a animais de rua, unindo descoberta de livros e propósito social."
+        },
+        {
             title: "Clube das Leitoras",
             description: "Plataforma comunitária para amantes da leitura compartilharem experiências e debaterem suas literaturas favoritas.",
             image: "/clubedasleitoras.png",
@@ -2276,7 +2292,7 @@ function ProjectsGrid() {
                 className: "absolute top-0 right-0 w-64 h-64 bg-[url('https://www.transparenttextures.com/patterns/old-paper.png')] opacity-40 mix-blend-multiply rounded-bl-full"
             }, void 0, false, {
                 fileName: "[project]/components/projects-grid.tsx",
-                lineNumber: 172,
+                lineNumber: 184,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$0$2e$10_react$2d$dom$40$19$2e$2$2e$0_react$40$19$2e$2$2e$0_$5f$react$40$19$2e$2$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2306,7 +2322,7 @@ function ProjectsGrid() {
                                         children: t.language === 'PT' ? 'Capítulo 02 — Case Studies' : 'Chapter 02 — Selected Works'
                                     }, void 0, false, {
                                         fileName: "[project]/components/projects-grid.tsx",
-                                        lineNumber: 183,
+                                        lineNumber: 195,
                                         columnNumber: 14
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$0$2e$10_react$2d$dom$40$19$2e$2$2e$0_react$40$19$2e$2$2e$0_$5f$react$40$19$2e$2$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -2314,13 +2330,13 @@ function ProjectsGrid() {
                                         children: t.language === 'PT' ? 'Lógica & Arquitetura.' : 'Logic & Architecture.'
                                     }, void 0, false, {
                                         fileName: "[project]/components/projects-grid.tsx",
-                                        lineNumber: 186,
+                                        lineNumber: 198,
                                         columnNumber: 14
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/components/projects-grid.tsx",
-                                lineNumber: 182,
+                                lineNumber: 194,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$0$2e$10_react$2d$dom$40$19$2e$2$2e$0_react$40$19$2e$2$2e$0_$5f$react$40$19$2e$2$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -2331,13 +2347,13 @@ function ProjectsGrid() {
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/components/projects-grid.tsx",
-                                lineNumber: 190,
+                                lineNumber: 202,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/components/projects-grid.tsx",
-                        lineNumber: 175,
+                        lineNumber: 187,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$0$2e$10_react$2d$dom$40$19$2e$2$2e$0_react$40$19$2e$2$2e$0_$5f$react$40$19$2e$2$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2367,29 +2383,29 @@ function ProjectsGrid() {
                                     ...project
                                 }, void 0, false, {
                                     fileName: "[project]/components/projects-grid.tsx",
-                                    lineNumber: 214,
+                                    lineNumber: 226,
                                     columnNumber: 17
                                 }, this)
                             }, project.title, false, {
                                 fileName: "[project]/components/projects-grid.tsx",
-                                lineNumber: 198,
+                                lineNumber: 210,
                                 columnNumber: 14
                             }, this))
                     }, void 0, false, {
                         fileName: "[project]/components/projects-grid.tsx",
-                        lineNumber: 196,
+                        lineNumber: 208,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/components/projects-grid.tsx",
-                lineNumber: 174,
+                lineNumber: 186,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/components/projects-grid.tsx",
-        lineNumber: 170,
+        lineNumber: 182,
         columnNumber: 5
     }, this);
 }

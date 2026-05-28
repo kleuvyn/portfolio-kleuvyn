@@ -9,6 +9,18 @@ export function ProjectsGrid() {
 
   const projects = [
     {
+      title: "Bibliopatas",
+      description: "Projeto biblioteca animal com 165 livros encontrados e um acervo para descobrir livros disponíveis enquanto a leitura financia abrigos e protetores independentes.",
+      image: "/bibliopatas.png",
+      tags: ["Next.js", "Catálogo", "Impacto Social"],
+      githubUrl: "#",
+      liveUrl: "https://bibliopatas.vercel.app/",
+      role: "Projeto em destaque",
+      challenge: "Criar uma vitrine acolhedora para um catálogo social que conecta livros, leitores e proteção animal sem perder clareza na navegação.",
+      architecture: "Interface editorial com foco no acervo, combinando apresentação minimalista, leitura rápida e destaque para os livros disponíveis.",
+      impact: "Cada página lida ajuda a ampliar o apoio a animais de rua, unindo descoberta de livros e propósito social.",
+    },
+    {
       title: "Clube das Leitoras",
       description: "Plataforma comunitária para amantes da leitura compartilharem experiências e debaterem suas literaturas favoritas.",
       image: "/clubedasleitoras.png",
