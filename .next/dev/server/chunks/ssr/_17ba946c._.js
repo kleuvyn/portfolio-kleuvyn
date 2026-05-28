@@ -1960,7 +1960,7 @@ function ProjectsGrid() {
     const projects = [
         {
             title: "Bibliopatas",
-            description: "Projeto biblioteca animal com 165 livros encontrados e um acervo para descobrir livros disponíveis enquanto a leitura financia abrigos e protetores independentes.",
+            description: "Plataforma comunitária para amantes da leitura compartilharem experiências e debaterem suas literaturas favoritas.",
             image: "/bibliopatas.png",
             tags: [
                 "Next.js",
@@ -1969,7 +1969,7 @@ function ProjectsGrid() {
             ],
             githubUrl: "#",
             liveUrl: "https://bibliopatas.vercel.app/",
-            role: "Projeto em destaque",
+            role: "Full Stack Developer",
             challenge: "Criar uma vitrine acolhedora para um catálogo social que conecta livros, leitores e proteção animal sem perder clareza na navegação.",
             architecture: "Interface editorial com foco no acervo, combinando apresentação minimalista, leitura rápida e destaque para os livros disponíveis.",
             impact: "Cada página lida ajuda a ampliar o apoio a animais de rua, unindo descoberta de livros e propósito social."
@@ -1989,22 +1989,6 @@ function ProjectsGrid() {
             challenge: "Desbravar e simplificar a conexão contínua entre leitores, fomentando um espaço virtual engajado para debates profundos e resenhas sem ruídos sociais.",
             architecture: "Construção de uma rede comunitária escalável. Ecossistema estruturado em Next.js para renderização tática, unindo fluxo de fóruns imersivos ao design focado em leitura.",
             impact: "Fortificou laços entre leitores apaixonados e democratizou discussões enriquecedoras, gerando um polo autônomo constante de troca de literatura."
-        },
-        {
-            title: "Bibliopatas - Biblioteca Animal",
-            description: "Livros que salvam vidas. Cada pagina lida financia abrigos e protetores independentes que cuidam de animais de rua. Projeto em Brasilia - DF com envio para todo o Brasil (frete a parte) e acervo online para compra.",
-            image: "/bibliopatas.png",
-            tags: [
-                "Next.js",
-                "Catalogo de Livros",
-                "Impacto Social"
-            ],
-            githubUrl: "#",
-            liveUrl: "https://bibliopatas.vercel.app",
-            role: "Projeto Social",
-            challenge: "Criar um site simples e confiavel para exibicao do acervo de livros, conectando leitores a compras que apoiam a causa animal sem friccao.",
-            architecture: "Experiencia web focada em descoberta de acervo com busca e filtros, estrutura orientada a performance e leitura confortavel em desktop e mobile.",
-            impact: "Amplia a visibilidade do projeto em Brasilia - DF e em todo o Brasil, transformando interesse por livros em apoio direto a abrigos e protetores independentes."
         },
         {
             title: "Cebrapol",
